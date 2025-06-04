@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowDown } from 'lucide-react';
 import { Typewriter } from 'react-simple-typewriter';
 import TypewriterWithScramble from './TypewriterWithScramble';
+import resumePDF from '../assets/dinuka_liyanage_resume.pdf';
 
 const HeroSection: React.FC = () => {
   const scrollToSection = (id: string) => {
@@ -54,10 +55,10 @@ const HeroSection: React.FC = () => {
               >
                 Contact Me
               </button>
-            </div>
+            </div>  
             <div className="hero-buttons">
               <a
-                href="/documents/Dinuka-Liyanage-Resume.pdf"
+                href={resumePDF}
                 download
                 className="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
               >
