@@ -57,7 +57,7 @@ const HeroSection: React.FC = () => {
             </div>
             <div className="hero-buttons">
               <a
-                href="/documents/Dinuka-Liyanage-Resume.pdf"
+                href="/public/documents/Dinuka-Liyanage-Resume.pdf"
                 download
                 className="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
               >
