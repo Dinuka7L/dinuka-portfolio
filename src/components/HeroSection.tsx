@@ -1,6 +1,5 @@
 import React from 'react';
 import { ArrowDown } from 'lucide-react';
-import { Typewriter } from 'react-simple-typewriter';
 import TypewriterWithScramble from './TypewriterWithScramble';
 import resumePDF from '../assets/dinuka_liyanage_resume.pdf';
 
