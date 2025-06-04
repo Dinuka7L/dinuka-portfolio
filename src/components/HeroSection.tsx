@@ -1,0 +1,85 @@
+import React from 'react';
+import { ArrowDown } from 'lucide-react';
+import { Typewriter } from 'react-simple-typewriter';
+import TypewriterWithScramble from './TypewriterWithScramble';
+
+const HeroSection: React.FC = () => {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <section 
+      id="about" 
+      className="min-h-screen flex items-center relative pt-20 pb-16 overflow-hidden bg-gradient-to-br from-white to-blue-50 dark:from-gray-900 dark:to-gray-800"
+    >
+      <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div 
+            className="order-2 lg:order-1 animate-fadeIn"
+            style={{ animationDelay: '0.2s' }}
+          >
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-gray-900 dark:text-white">
+              Hi, I'm <span className="text-blue-600 dark:text-blue-400">
+                <TypewriterWithScramble text="Dinuka Liyanage" typeSpeed={50} deleteSpeed={30} pauseTime={4000} />
+
+              </span>
+
+            </h1>
+            
+            <h2 className="text-xl md:text-2xl font-medium mb-6 text-gray-700 dark:text-gray-300">
+              Undergraduate | Cybersecurity
+            </h2>
+            
+            <p className="text-lg mb-8 text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl">
+              Welcome to my portfolio! I'm a passionate IT Undergraduate with expertise in Cybersecurity . 
+              With 1 month of experience, I specialize in learning and implementing robust cybersecurity solutions. I'm dedicated to creating a safer digital space to live in through information security.
+            </p>
+            
+            <div className="flex flex-wrap gap-4">
+              <button 
+                onClick={() => scrollToSection('projects')}
+                className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors shadow-lg hover:shadow-xl"
+              >
+                View My Work
+              </button>
+              <button 
+                onClick={() => scrollToSection('contact')}
+                className="px-6 py-3 bg-transparent border-2 border-blue-600 text-blue-600 dark:text-blue-400 hover:bg-blue-600/10 font-medium rounded-lg transition-colors"
+              >
+                Contact Me
+              </button>
+            </div>
+          </div>
+          
+          <div className="order-1 lg:order-2 flex justify-center lg:justify-end animate-fadeIn" style={{ animationDelay: '0.4s' }}>
+            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-xl">
+              <img 
+                src="https://media.licdn.com/dms/image/v2/D5603AQFTYxGgrYH09g/profile-displayphoto-shrink_400_400/B56Zc6f5GsG0Ag-/0/1749033129324?e=1754524800&v=beta&t=y_Xrrx1cwqjr5Y1YO14fnTHS9mV2ovs9tVucTZ03yL0" 
+                alt="Profile" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+        
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <button 
+            onClick={() => scrollToSection('qualifications')}
+            className="p-2 rounded-full bg-white/30 dark:bg-gray-800/30 backdrop-blur-sm hover:bg-white/50 dark:hover:bg-gray-800/50 transition-colors"
+            aria-label="Scroll down"
+          >
+            <ArrowDown size={24} className="text-gray-700 dark:text-gray-300" />
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;
