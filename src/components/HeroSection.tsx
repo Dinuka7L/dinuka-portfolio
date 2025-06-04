@@ -33,7 +33,7 @@ const HeroSection: React.FC = () => {
             </h1>
             
             <h2 className="text-xl md:text-2xl font-medium mb-6 text-gray-700 dark:text-gray-300">
-              Undergraduate | Cybersecurity
+              Undergraduate | Cybersecurity | Accounting and Finance
             </h2>
             
             <p className="text-lg mb-8 text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl">
@@ -55,12 +55,21 @@ const HeroSection: React.FC = () => {
                 Contact Me
               </button>
             </div>
+            <div className="hero-buttons">
+              <a
+                href="/documents/Dinuka-Liyanage-Resume.pdf"
+                download
+                className="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+              >
+                Download My Resume
+              </a>
+            </div>
           </div>
           
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end animate-fadeIn" style={{ animationDelay: '0.4s' }}>
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-xl">
               <img 
-                src="https://media.licdn.com/dms/image/v2/D5603AQFTYxGgrYH09g/profile-displayphoto-shrink_400_400/B56Zc6f5GsG0Ag-/0/1749033129324?e=1754524800&v=beta&t=y_Xrrx1cwqjr5Y1YO14fnTHS9mV2ovs9tVucTZ03yL0" 
+                src="https://avatars.githubusercontent.com/u/179111403?v=4" 
                 alt="Profile" 
                 className="w-full h-full object-cover"
               />
