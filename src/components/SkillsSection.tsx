@@ -1,16 +1,14 @@
-import React from 'react';
-import { Code, Server, Network, Database, Globe, LineChart, Lightbulb } from 'lucide-react';
+import React, { useEffect, useRef, useState } from 'react';
+import {
+  Code,
+  Server,
+  Network,
+  Database,
+  Globe,
+  Lightbulb
+} from 'lucide-react';
 
-type SkillCategory = {
-  name: string;
-  icon: React.ReactNode;
-  skills: {
-    name: string;
-    level: number; // 1-10
-  }[];
-};
-
-const skillsData: SkillCategory[] = [
+const skillsData = [
   {
     name: 'Frontend Development',
     icon: <Code size={24} />,
@@ -79,10 +77,23 @@ const skillsData: SkillCategory[] = [
   }
 ];
 
-const SkillsSection: React.FC = () => {
+const SkillsSection = () => {
+  const sectionRef = useRef(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setInView(entry.isIntersecting),
+      { threshold: 0.3 }
+    );
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section 
-      id="skills" 
+    <section
+      ref={sectionRef}
+      id="skills"
       className="py-20 bg-white dark:bg-gray-900"
     >
       <div className="container mx-auto px-4">
@@ -95,10 +106,10 @@ const SkillsSection: React.FC = () => {
             A comprehensive overview of my technical skills and areas of expertise across various domains.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillsData.map((category, index) => (
-            <div 
+            <div
               key={index}
               className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 shadow-md transition-transform duration-300 hover:shadow-lg hover:-translate-y-1"
             >
@@ -108,7 +119,7 @@ const SkillsSection: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white">{category.name}</h3>
               </div>
-              
+
               <div className="space-y-4">
                 {category.skills.map((skill, skillIndex) => (
                   <div key={skillIndex}>
@@ -117,9 +128,11 @@ const SkillsSection: React.FC = () => {
                       <span className="text-gray-500 dark:text-gray-400 text-sm">{skill.level * 10}%</span>
                     </div>
                     <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                      <div 
+                      <div
                         className="bg-blue-600 dark:bg-blue-500 h-2.5 rounded-full transition-all duration-1000 ease-out"
-                        style={{ width: `${skill.level * 10}%` }}
+                        style={{
+                          width: inView ? `${skill.level * 10}%` : '0%'
+                        }}
                       ></div>
                     </div>
                   </div>
