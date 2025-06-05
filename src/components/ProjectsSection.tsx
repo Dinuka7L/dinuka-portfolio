@@ -16,62 +16,92 @@ const projectsData: Project[] = [
   {
     id: 1,
     title: 'Portfolio Cryptosystem',
-    description: "A complete cryptosystem which consists of symmetric and asymmetric encryption, hashing, and digital signatures.",
+    description: "A complete cryptosystem which consists of symmetric and asymmetric ciphers, hashing, and digital signatures.",
     image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    tags: ['Python', 'RSA', 'Hashing', 'Ditial-Signature', 'Cryptography', 'Ciphers'],
+    tags: ['Python', 'RSA', 'Hashing', 'Ditial-Signature', 'Cryptography', 'Ciphers', 'Cybersecurity'],
     liveUrl: 'https://example.com',
     githubUrl: 'https://github.com',
     featured: true
   },
   {
     id: 2,
-    title: 'Task Management App',
-    description: 'A productivity application that helps users organize tasks, set deadlines, and track progress. Built with React and Firebase for real-time updates.',
-    image: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    tags: ['React', 'Firebase', 'Tailwind CSS', 'Context API'],
+    title: 'Penetration Test on a Simulated Scenario',
+    description: 'A full black-box penetration test on a simulated scenario, including vulnerability scanning, exploitation, and reporting.',
+    image: 'https://img.freepik.com/free-photo/cybersecurity-concept-collage-design_23-2151877153.jpg?semt=ais_items_boosted&w=740',
+    tags: ['Ethical Hacking', 'Kali Linux', 'Penetration Testing', 'Burp Suite', 'Metasploit', 'Offensive Security', 'Cybersecurity'],
     liveUrl: 'https://example.com',
     githubUrl: 'https://github.com',
     featured: true
   },
   {
     id: 3,
-    title: 'Weather Dashboard',
-    description: 'A weather application that provides current weather data and forecasts for any location. Utilizes the OpenWeather API and features a clean, intuitive interface.',
-    image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    tags: ['JavaScript', 'API Integration', 'CSS3', 'Responsive Design'],
+    title: 'Computer Forensics Investigation',
+    description: 'A computer forensics investigation project that involved analyzing digital evidence, recovering deleted files, and reporting evidence.',
+    image: 'https://media.istockphoto.com/id/1178589003/photo/forensic-science-technician-analyzing-evidence-in-laboratory.jpg?s=612x612&w=0&k=20&c=U6MvdpuGTKCs_8EkB_pvsGPxDuL-_EKG-btS_uEQY00=',
+    tags: ['Computer Forensics', 'Autopsy', 'OSForensics', 'Digital Evidence', 'Data Recovery', 'Cybersecurity'],	
     liveUrl: 'https://example.com',
     githubUrl: 'https://github.com',
     featured: false
   },
   {
     id: 4,
-    title: 'Portfolio Website',
-    description: 'A personal portfolio website showcasing my projects and skills. Built with React and Tailwind CSS, featuring smooth animations and a responsive design.',
-    image: 'https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    tags: ['React', 'Tailwind CSS', 'Responsive Design'],
+    title: 'Malware Reversing and Analysis',
+    description: 'A complete malware reversing and analysis project that involved static and dynamic analysis, reverse engineering, and reporting on a Banking Trojan.',
+    image: 'https://plus.unsplash.com/premium_photo-1714618835760-5b2175ad3249?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWFsd2FyZXxlbnwwfHwwfHx8MA%3D%3D',
+    tags: ['IDA Pro', 'Malware Analysis', 'Reverse Engineering', 'Banking Trojan', 'Cybersecurity'],
     liveUrl: 'https://example.com',
     githubUrl: 'https://github.com',
     featured: true
   },
   {
     id: 5,
-    title: 'Recipe Finder',
-    description: 'A web application that allows users to search for recipes based on ingredients they have on hand. Integrates with a recipe API and includes filtering options.',
-    image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    tags: ['HTML', 'CSS', 'JavaScript', 'API Integration'],
+    title: 'IoT Attack Simulation',
+    description: 'Exploitation of vulnerabilities associated with MQTT Protocol and conducting FDI (False Data Injection) attacks on IoT device.',
+    image: 'https://static.vecteezy.com/system/resources/previews/023/754/401/non_2x/abstract-iot-internet-of-things-blue-background-image-circle-world-digital-network-concept-connected-to-the-internet-or-m2m-machine-to-machine-industrial-iot-commercial-iot-vector.jpg',
+    tags: ['IoT', 'MQTT', 'Cybersecurity', 'False Data Injection', 'Network Security', 'Intrusion Detection', 'Ethical Hacking'],
     liveUrl: 'https://example.com',
     githubUrl: 'https://github.com',
     featured: false
   },
   {
     id: 6,
-    title: 'Blog Platform',
-    description: 'A blogging platform with a custom CMS, allowing users to create, edit, and publish articles. Includes features like commenting, categories, and social sharing.',
-    image: 'https://images.pexels.com/photos/34140/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    tags: ['Next.js', 'MongoDB', 'Tailwind CSS', 'Authentication'],
+    title: 'Honeypot Deployment and Analysis',
+    description: 'Deployment of a honeypot to capture and analyze malicious activities, including data collection and threat intelligence.',
+    image: 'https://cdn.prod.website-files.com/667dd40ebb8095e89f27565d/667dd40ebb8095e89f27630a_blog_honepots.png',
+    tags: ['Honeypot', 'Cowrie', 'Snort', 'Cybersecurity', 'Threat Intelligence', 'Network Security'],
     liveUrl: 'https://example.com',
     githubUrl: 'https://github.com',
     featured: true
+  },
+  {
+    id: 7,
+    title: 'Bash Scripting and Automation',
+    description: 'A collection of Bash scripts for automating various tasks, including system monitoring, file management, and network operations.',
+    image: 'https://c4.wallpaperflare.com/wallpaper/396/50/367/linux-command-lines-unix-bash-grey-hd-wallpaper-thumb.jpg',
+    tags: ['Bash', 'Scripting', 'Automation', 'Linux', 'System Administration', 'Cybersecurity'],
+    liveUrl: 'https://example.com',
+    githubUrl: 'https://github.com',
+    featured: false
+  },
+  {
+    id: 8,
+    title: 'SIEM Implementation and Detection',
+    description: 'Implementation of a Splunk Security Information and Event Management (SIEM) system to monitor, detect incidents using Dashboards.',
+    image: 'https://images.squarespace-cdn.com/content/v1/52a2252ee4b0942951931788/1579911162482-VZHHR55LOOJ4KE92ON8M/splunk-d2e-it-codesign2019.png',
+    tags: ['SIEM', 'Splunk', 'Cybersecurity', 'Incident Detection', 'Log Management'],
+    liveUrl: 'https://example.com',
+    githubUrl: 'https://github.com',
+    featured: false
+  },
+    {
+    id: 9,
+    title: 'Database Design and Implementation',
+    description: 'Design and implementation of a relational database system using MySQL, including schema design, normalization, and query optimization.',
+    image: 'https://png.pngtree.com/thumb_back/fh260/background/20220712/pngtree-database-concept-database-on-digital-background-information-copy-base-photo-image_25012500.jpg',
+    tags: ['MySQL', 'Database Design', 'SQL', 'Data Management', 'Relational Database', 'Database'],
+    liveUrl: 'https://example.com',
+    githubUrl: 'https://github.com',
+    featured: false
   }
 ];
 
@@ -98,7 +128,8 @@ const ProjectsSection: React.FC = () => {
           </h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            A selection of my recent work, showcasing my skills and expertise in various technologies.
+            These are the projects that I have worked on during my university studies. They showcase my skills in various programming languages and technologies. Each project has been a learning experience, allowing me to apply theoretical knowledge to practical applications.
+            Feel free to explore the projects, check out the source code, and see the live demos where available. Your feedback is always welcome!
           </p>
         </div>
         
