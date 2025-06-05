@@ -4,8 +4,8 @@ import TypewriterWithScramble from './TypewriterWithScramble';
 import resumePDF from '../assets/dinuka_liyanage_resume.pdf';
 import { FlipWords } from "../ui/flip-words";
 
-const flipWords1 = ["Cybersecurity", "Accounting & Finance"];
-const flipWords2 = ["Cybersecurity", "Accounting & Finance"];
+const flipWords1 = ["Cybersecurity", "Accounting & Finance", "Network Administration", "Software Development", "Information Security", " Business Management", "Web Development"];
+
 
 
 const HeroSection: React.FC = () => {
@@ -38,7 +38,7 @@ const HeroSection: React.FC = () => {
             </h1>
             
             <h2 className="text-xl md:text-2xl font-medium mb-6 text-gray-700 dark:text-gray-300">
-              I'm an Undergraduate in<FlipWords words={flipWords1} />
+              I specialize in<FlipWords words={flipWords1} />
             </h2>
             
             <p className="text-lg mb-8 text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl">
