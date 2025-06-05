@@ -4,6 +4,7 @@ import HeroSection from './components/HeroSection';
 import QualificationsSection from './components/QualificationsSection';
 import ExperienceSection from './components/ExperienceSection';
 import SkillsSection from './components/SkillsSection';
+import MyProjectsSection from './components/MyProjectsSection';
 import ProjectsSection from './components/ProjectsSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
@@ -17,6 +18,7 @@ function App() {
         <QualificationsSection />
         <ExperienceSection />
         <SkillsSection />
+        <MyProjectsSection />
         <ProjectsSection />
         <ContactSection />
       </main>

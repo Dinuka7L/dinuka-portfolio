@@ -1,4 +1,10 @@
 {
+  "compilerOptions": {
+    "baseUrl": ".", // makes `@` relative to the root
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },

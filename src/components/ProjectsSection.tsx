@@ -15,10 +15,10 @@ type Project = {
 const projectsData: Project[] = [
   {
     id: 1,
-    title: 'E-Commerce Platform',
-    description: 'A full-stack e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product search, shopping cart, and secure payment processing.',
-    image: 'https://images.pexels.com/photos/35550/ipad-tablet-technology-touch.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    tags: ['React', 'Node.js', 'MongoDB', 'Express', 'Stripe'],
+    title: 'Portfolio Cryptosystem',
+    description: "A complete cryptosystem which consists of symmetric and asymmetric encryption, hashing, and digital signatures.",
+    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    tags: ['Python', 'RSA', 'Hashing', 'Ditial-Signature', 'Cryptography', 'Ciphers'],
     liveUrl: 'https://example.com',
     githubUrl: 'https://github.com',
     featured: true
@@ -94,7 +94,7 @@ const ProjectsSection: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
-            My Projects
+            My University Projects
           </h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
