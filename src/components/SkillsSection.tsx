@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, Server, PaintBucket, Database, Globe, LineChart, Lightbulb } from 'lucide-react';
+import { Code, Server, Network, Database, Globe, LineChart, Lightbulb } from 'lucide-react';
 
 type SkillCategory = {
   name: string;
@@ -23,25 +23,25 @@ const skillsData: SkillCategory[] = [
     ]
   },
   {
-    name: 'Backend Development',
+    name: 'Software Development',
     icon: <Server size={24} />,
     skills: [
-      { name: 'Node.js', level: 8 },
-      { name: 'Python', level: 7 },
-      { name: 'Java', level: 5 },
-      { name: 'PHP', level: 6 },
-      { name: 'Go', level: 4 }
+      { name: 'Python', level: 8 },
+      { name: 'Node.js', level: 7 },
+      { name: 'Bash', level: 6 },
+      { name: 'Linux', level: 5 },
+      { name: 'R', level: 4 }
     ]
   },
   {
-    name: 'Design',
-    icon: <PaintBucket size={24} />,
+    name: 'Network Security',
+    icon: <Network size={24} />,
     skills: [
-      { name: 'UI/UX', level: 7 },
-      { name: 'Figma', level: 8 },
-      { name: 'Adobe XD', level: 6 },
-      { name: 'Responsive Design', level: 9 },
-      { name: 'Design Systems', level: 7 }
+      { name: 'IDS', level: 7 },
+      { name: 'Routing, Switching & Network Device Configuration', level: 8 },
+      { name: 'Network Design and Architecture', level: 9 },
+      { name: 'Firewalls (PfSense)', level: 6 },
+      { name: 'SIEM (Splunk, FortiSIEM)', level: 5 }
     ]
   },
   {

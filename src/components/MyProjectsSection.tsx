@@ -39,11 +39,11 @@ function MyProjectsSection() {
       <div className="container mx-auto px-4">
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
-                  My Personal Projects
+                Personal Projects
                 </h2>
                 <div className="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
                 <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-                  A selection of my personal projects.
+                  This section contains my personal projects.
                 </p>
               </div>
       </div>
@@ -240,72 +240,39 @@ const cards = [
     },
   },
   {
-    description: "Babbu Maan",
-    title: "Mitran Di Chhatri",
-    src: "https://assets.aceternity.com/demos/babbu-maan.jpeg",
+    description: "Password Stealing Script",
+    title: "Dark Spectre",
+    src: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/47a1cf8e-8afb-4e9f-8ba6-ec76621da837/d8qe5db-c95996ea-e987-4c0e-9343-759074fc1966.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ3YTFjZjhlLThhZmItNGU5Zi04YmE2LWVjNzY2MjFkYTgzN1wvZDhxZTVkYi1jOTU5OTZlYS1lOTg3LTRjMGUtOTM0My03NTkwNzRmYzE5NjYuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.6MT22J4jLhKxIhVnB5wMaR4r-ol_x72VunpWZaJU0VM",
     ctaText: "Visit",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => {
       return (
         <p>
-          Babu Maan, a legendary Punjabi singer, is renowned for his soulful
-          voice and profound lyrics that resonate deeply with his audience. Born
-          in the village of Khant Maanpur in Punjab, India, he has become a
-          cultural icon in the Punjabi music industry. <br /> <br /> His songs
-          often reflect the struggles and triumphs of everyday life, capturing
-          the essence of Punjabi culture and traditions. With a career spanning
-          over two decades, Babu Maan has released numerous hit albums and
-          singles that have garnered him a massive fan following both in India
-          and abroad.
+          Developed an AutoIT based script which utilizes Web Browser Pass View Application to open all the browser saved passwords and save the passwords as a text file in the script directory  <br /> <br />
+          However this script is not intended to be used for malicious purposes. It is designed to demonstrate the potential vulnerabilities in web browsers and the importance of securing sensitive information. <br /> <br />
+          Further the script won't work on any system which has an antivirus or a firewall installed. This is because the script is designed to be used in a controlled environment where the user has full access to the system and the browser saved passwords. <br /> <br />
         </p>
       );
     },
   },
 
   {
-    description: "Metallica",
-    title: "For Whom The Bell Tolls",
-    src: "https://assets.aceternity.com/demos/metallica.jpeg",
+    description: "Workflow Automation",
+    title: "Work Mode",
+    src: "https://media.istockphoto.com/id/1698710873/photo/automation-software-technology-process-system.jpg?s=612x612&w=0&k=20&c=LD3dmRbyPIkD8TkmWsJDWN-gcpHSADUgFqWWqiSkvFI=",
     ctaText: "Visit",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => {
       return (
         <p>
-          Metallica, an iconic American heavy metal band, is renowned for their
-          powerful sound and intense performances that resonate deeply with
-          their audience. Formed in Los Angeles, California, they have become a
-          cultural icon in the heavy metal music industry. <br /> <br /> Their
-          songs often reflect themes of aggression, social issues, and personal
-          struggles, capturing the essence of the heavy metal genre. With a
-          career spanning over four decades, Metallica has released numerous hit
-          albums and singles that have garnered them a massive fan following
-          both in the United States and abroad.
+          Developed an AutoIT based script which opens mail, LMS, and music and other applications to ease the workflow <br /> <br />
+          This saves time and effort by automating the process of opening multiple applications at once. <br /> <br />
+          The script is also capable of opening different applications in a specific scenarios, which can be useful for users who have a specific workflows. <br /> <br />
+          
         </p>
       );
     },
-  },
-  {
-    description: "Lord Himesh",
-    title: "Aap Ka Suroor",
-    src: "https://assets.aceternity.com/demos/aap-ka-suroor.jpeg",
-    ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
-    content: () => {
-      return (
-        <p>
-          Himesh Reshammiya, a renowned Indian music composer, singer, and
-          actor, is celebrated for his distinctive voice and innovative
-          compositions. Born in Mumbai, India, he has become a prominent figure
-          in the Bollywood music industry. <br /> <br /> His songs often feature
-          a blend of contemporary and traditional Indian music, capturing the
-          essence of modern Bollywood soundtracks. With a career spanning over
-          two decades, Himesh Reshammiya has released numerous hit albums and
-          singles that have garnered him a massive fan following both in India
-          and abroad.
-        </p>
-      );
-    },
-  },
+  }
 ];
 
 export default MyProjectsSection;

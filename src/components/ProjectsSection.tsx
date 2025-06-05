@@ -124,12 +124,12 @@ const ProjectsSection: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
-            My University Projects
+            University Projects
           </h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            These are the projects that I have worked on during my university studies. They showcase my skills in various programming languages and technologies. Each project has been a learning experience, allowing me to apply theoretical knowledge to practical applications.
-            Feel free to explore the projects, check out the source code, and see the live demos where available. Your feedback is always welcome!
+            These are the projects that I have worked on during my university studies. They showcase my skills in various programming languages and technologies. Each project has allowed me to apply theoretical knowledge to practical applications.
+            Feel free to explore the projects, Further details are still in development. Your feedback is always welcome!
           </p>
         </div>
         
