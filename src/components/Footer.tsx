@@ -9,18 +9,20 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
-            <h3 className="text-2xl font-bold text-blue-400">Portfolio</h3>
-            <p className="text-gray-400 mt-2">Showcasing my work and skills</p>
+            <h3 className="text-2xl font-bold text-blue-400">Dinuka Liyanage's Portfolio</h3>
+            <p className="text-gray-400 mt-2">EVERY SCAR WILL BUILD MY THRONE </p>
           </div>
           
           <div className="text-center md:text-left mb-4 md:mb-0">
             <h4 className="text-lg font-medium mb-2">Quick Links</h4>
             <div className="flex flex-wrap justify-center md:justify-start gap-4">
               <a href="#about" className="text-gray-400 hover:text-blue-400 transition-colors">About</a>
-              <a href="#qualifications" className="text-gray-400 hover:text-blue-400 transition-colors">Qualifications</a>
+              <a href="#qualifications" className="text-gray-400 hover:text-blue-400 transition-colors">Education</a>
               <a href="#experience" className="text-gray-400 hover:text-blue-400 transition-colors">Experience</a>
               <a href="#skills" className="text-gray-400 hover:text-blue-400 transition-colors">Skills</a>
-              <a href="#projects" className="text-gray-400 hover:text-blue-400 transition-colors">Projects</a>
+              <a href="#ProfessionalQualifications" className="text-gray-400 hover:text-blue-400 transition-colors">Qualifications</a>
+              <a href="#PersonalProjects" className="text-gray-400 hover:text-blue-400 transition-colors">Personal Projects</a>
+              <a href="#projects" className="text-gray-400 hover:text-blue-400 transition-colors">Uni Projects</a>
               <a href="#contact" className="text-gray-400 hover:text-blue-400 transition-colors">Contact</a>
             </div>
           </div>

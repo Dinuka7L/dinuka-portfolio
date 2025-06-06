@@ -41,7 +41,7 @@ const HeroSection: React.FC = () => {
               I specialize in<FlipWords words={flipWords1} />
             </h2>
             
-            <p className="text-lg mb-8 text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl text-justify">
+            <p className="text-lg mb-8 text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl">
               Welcome to my portfolio! I'm a passionate undergraduate with a goal of reaching information security & management fields. 
               With a strong academic background and professional experience, I'm learning and implementing robust cybersecurity solutions. I'm dedicated to creating a safer digital space to live in, through information security.
             </p>
@@ -49,7 +49,7 @@ const HeroSection: React.FC = () => {
             <div className="flex flex-wrap gap-4">
               <button 
                 onClick={() => scrollToSection('projects')}
-                className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors shadow-lg hover:shadow-xl"
+                className="px-6 py-3 bg-transparent border-2 border-blue-600 text-blue-600 dark:text-blue-400 hover:bg-blue-600/10 font-medium rounded-lg transition-colors"
               >
                 View My Work
               </button>
