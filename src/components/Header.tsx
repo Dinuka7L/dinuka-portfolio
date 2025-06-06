@@ -66,7 +66,7 @@ const Header: React.FC = () => {
               onClick={() => scrollToSection('qualifications')} 
               className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
-              Qualifications
+              Education
             </button>
             <button 
               onClick={() => scrollToSection('experience')} 
@@ -79,6 +79,18 @@ const Header: React.FC = () => {
               className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
               Skills
+            </button>
+            <button 
+              onClick={() => scrollToSection('ProfessionalQualifications')} 
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            >
+              Qualifications
+            </button>
+            <button 
+              onClick={() => scrollToSection('PersonalProjects')} 
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            >
+              Personal Projects
             </button>
             <button 
               onClick={() => scrollToSection('projects')} 

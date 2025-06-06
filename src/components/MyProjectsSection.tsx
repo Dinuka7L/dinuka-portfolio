@@ -33,7 +33,7 @@ function MyProjectsSection() {
   useOutsideClick(ref, () => setActive(null));
 
   return (
-    <section className="py-20 bg-gray-50 dark:bg-gray-800">
+    <section id="PersonalProjects" className="py-20 bg-gray-50 dark:bg-gray-800">
     <>
     
       <div className="container mx-auto px-4">

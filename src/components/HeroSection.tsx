@@ -4,7 +4,7 @@ import TypewriterWithScramble from './TypewriterWithScramble';
 import resumePDF from '../assets/dinuka_liyanage_resume.pdf';
 import { FlipWords } from "../ui/flip-words";
 
-const flipWords1 = ["Cybersecurity", "Accounting & Finance", "Network Administration", "Software Development", "Information Security", " Business Management", "Web Development"];
+const flipWords1 = ["Cybersecurity", "Accounting & Finance", "Network Administration", "Software Development", "Workflow Automation", " Business Management", "Web Development"];
 
 
 
@@ -41,9 +41,9 @@ const HeroSection: React.FC = () => {
               I specialize in<FlipWords words={flipWords1} />
             </h2>
             
-            <p className="text-lg mb-8 text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl">
-              Welcome to my portfolio! I'm a passionate undergraduate with a goal of information security & management fields. 
-              With 1 month of experience, I specialize in learning and implementing robust cybersecurity solutions. I'm dedicated to creating a safer digital space to live in through information security.
+            <p className="text-lg mb-8 text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl text-justify">
+              Welcome to my portfolio! I'm a passionate undergraduate with a goal of reaching information security & management fields. 
+              With a strong academic background and professional experience, I'm learning and implementing robust cybersecurity solutions. I'm dedicated to creating a safer digital space to live in, through information security.
             </p>
             
             <div className="flex flex-wrap gap-4">
