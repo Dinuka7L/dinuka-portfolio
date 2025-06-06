@@ -45,7 +45,7 @@ const educationData: Education[] = [
     description: 'Completed GCE Advanced Level Examination with a focus on Commerce stream. Developed strong analytical and problem-solving skills through rigorous coursework in Accounting, Economics and IT subjects.',
     grade: 'Grade: 3As, Z-Score: 2.5195',
     logo: 'http://www.richmondcollege.lk/wp-content/uploads/2022/10/crest-copy.png',
-    gradientColors: ['#0f7176', '#0085fe','#c30025'] 
+    gradientColors: ['#00b4d8', '#0085fe','#c30025'] 
   }
 ];
 
@@ -86,7 +86,7 @@ const QualificationsSection: React.FC = () => {
   <div
     className="rounded-xl p-[2px] transition-transform duration-300 hover:scale-[1.02]"
     style={{
-      backgroundImage: `linear-gradient(135deg, ${item.gradientColors.join(', ')})`
+      backgroundImage: `linear-gradient(135deg, ${(item.gradientColors ?? ['#2563eb', '#1e3a8a']).join(', ')})`
     }}
   >
     <div className="bg-white dark:bg-gray-800 rounded-xl p-6 h-full w-full">
