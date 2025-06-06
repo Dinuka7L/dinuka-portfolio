@@ -146,11 +146,11 @@ const Header: React.FC = () => {
       
       {/* Mobile menu */}
       <div 
-        className={`md:hidden fixed inset-0 z-40 bg-white dark:bg-gray-900 transition-transform duration-300 ease-in-out ${
+        className={`md:hidden fixed inset-0 z-40 bg-white dark:bg-gray-900 overflow-y-auto transition-transform duration-300 ease-in-out ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        <div className="flex flex-col items-center justify-center h-full space-y-8 text-xl">
+        <div className="flex flex-col items-center pt-24 pb-12 space-y-8 text-xl">
           <button 
               onClick={() => scrollToSection('about')} 
               className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
