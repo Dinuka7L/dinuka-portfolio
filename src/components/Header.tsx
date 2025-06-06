@@ -31,12 +31,18 @@ const Header: React.FC = () => {
   const toggleTheme = () => setIsDarkMode(!isDarkMode);
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsOpen(false);
-    }
-  };
+  const element = document.getElementById(id);
+  if (element) {
+    const yOffset = -80; // height of fixed header (adjust if needed)
+    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+    window.scrollTo({ top: y, behavior: 'smooth' });
+
+    // Delay closing the menu slightly to allow scroll animation to start
+    setTimeout(() => setIsOpen(false), 300); // Adjust delay as needed
+  }
+};
+
 
   return (
     <header 
@@ -96,7 +102,7 @@ const Header: React.FC = () => {
               onClick={() => scrollToSection('projects')} 
               className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
-              Projects
+              Uni Projects
             </button>
             <button 
               onClick={() => scrollToSection('contact')} 
@@ -191,7 +197,7 @@ const Header: React.FC = () => {
               onClick={() => scrollToSection('projects')} 
               className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
-              Projects
+              Uni Projects
             </button>
             <button 
               onClick={() => scrollToSection('contact')} 
