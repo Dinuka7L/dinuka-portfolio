@@ -3,7 +3,7 @@ import { ArrowDown } from 'lucide-react';
 import TypewriterWithScramble from './TypewriterWithScramble';
 import resumePDF from '../assets/dinuka_liyanage_resume.pdf';
 import { FlipWords } from "../ui/flip-words";
-
+import { MovingBorderImage  } from "../ui/moving-border";
 const flipWords1 = ["Cybersecurity", "Accounting & Finance", "Network Administration", "Software Development", "Workflow Automation", " Business Management", "Web Development"];
 
 
@@ -72,13 +72,15 @@ const HeroSection: React.FC = () => {
           </div>
           
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end animate-fadeIn" style={{ animationDelay: '0.4s' }}>
-            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-xl">
-              <img 
-                src="https://avatars.githubusercontent.com/u/179111403?v=4" 
-                alt="Profile" 
-                className="w-full h-full object-cover"
-              />
-            </div>
+            
+            <MovingBorderImage
+  src="https://avatars.githubusercontent.com/u/179111403?v=4"
+  size={320}
+  imageSize={280}
+  borderWidth={1}
+  duration={4000}
+  className="shadow-xl border-4 border-white dark:border-gray-800"
+/>
           </div>
         </div>
         

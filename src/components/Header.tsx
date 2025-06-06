@@ -3,7 +3,9 @@ import { Menu, X, Moon, Sun } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+  return document.documentElement.classList.contains('dark');
+  });
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {

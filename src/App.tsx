@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import QualificationsSection from './components/QualificationsSection';
@@ -11,6 +11,11 @@ import ProfessionalQualificationsSection from './components/ProfessionalQualific
 import Footer from './components/Footer';
 
 function App() {
+  // This will force dark mode on first load
+  useEffect(() => {
+    document.documentElement.classList.add('dark');
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
       <Header />
