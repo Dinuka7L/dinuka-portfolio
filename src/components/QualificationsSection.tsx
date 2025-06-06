@@ -1,6 +1,6 @@
 import React from 'react';
 import { Calendar, MapPin } from 'lucide-react';
-import { BackgroundGradient } from "../ui/background-gradient";
+
 
 type Education = {
   degree: string;
