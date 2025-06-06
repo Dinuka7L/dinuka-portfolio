@@ -152,41 +152,53 @@ const Header: React.FC = () => {
       >
         <div className="flex flex-col items-center justify-center h-full space-y-8 text-xl">
           <button 
-            onClick={() => scrollToSection('about')} 
-            className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-          >
-            About
-          </button>
-          <button 
-            onClick={() => scrollToSection('qualifications')} 
-            className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-          >
-            Qualifications
-          </button>
-          <button 
-            onClick={() => scrollToSection('experience')} 
-            className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-          >
-            Experience
-          </button>
-          <button 
-            onClick={() => scrollToSection('skills')} 
-            className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-          >
-            Skills
-          </button>
-          <button 
-            onClick={() => scrollToSection('projects')} 
-            className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-          >
-            Projects
-          </button>
-          <button 
-            onClick={() => scrollToSection('contact')} 
-            className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-          >
-            Contact
-          </button>
+              onClick={() => scrollToSection('about')} 
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            >
+              About
+            </button>
+            <button 
+              onClick={() => scrollToSection('qualifications')} 
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            >
+              Education
+            </button>
+            <button 
+              onClick={() => scrollToSection('experience')} 
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            >
+              Experience
+            </button>
+            <button 
+              onClick={() => scrollToSection('skills')} 
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            >
+              Skills
+            </button>
+            <button 
+              onClick={() => scrollToSection('ProfessionalQualifications')} 
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            >
+              Qualifications
+            </button>
+            <button 
+              onClick={() => scrollToSection('PersonalProjects')} 
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            >
+              Personal Projects
+            </button>
+            <button 
+              onClick={() => scrollToSection('projects')} 
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            >
+              Projects
+            </button>
+            <button 
+              onClick={() => scrollToSection('contact')} 
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            >
+              Contact
+            </button>
         </div>
       </div>
     </header>
