@@ -8,13 +8,8 @@ const Header: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 10);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -27,92 +22,67 @@ const Header: React.FC = () => {
     }
   }, [isDarkMode]);
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleMenu = () => {
+    if (!isOpen) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setTimeout(() => setIsOpen(true), 300);
+    } else {
+      setIsOpen(false);
+    }
+  };
+
   const toggleTheme = () => setIsDarkMode(!isDarkMode);
 
   const scrollToSection = (id: string) => {
-  const element = document.getElementById(id);
-  if (element) {
-    const yOffset = -80; // height of fixed header (adjust if needed)
-    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
-    window.scrollTo({ top: y, behavior: 'smooth' });
-
-    // Delay closing the menu slightly to allow scroll animation to start
-    setTimeout(() => setIsOpen(false), 300); // Adjust delay as needed
-  }
-};
-
+    const element = document.getElementById(id);
+    if (element) {
+      const yOffset = -80;
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+      setTimeout(() => setIsOpen(false), 300);
+    }
+  };
 
   return (
-    <header 
+    <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm shadow-md py-3' 
+        isScrolled
+          ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm shadow-md py-3'
           : 'bg-transparent py-5'
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <a 
-          href="#" 
+        <a
+          href="#"
           className="text-2xl font-bold text-blue-600 dark:text-blue-400 transition-colors"
         >
-          Dinuka Liyanage 
+          Dinuka Liyanage
         </a>
-        
+
+        {/* Desktop nav */}
         <div className="hidden md:flex items-center space-x-8">
           <nav className="flex items-center space-x-6">
-            <button 
-              onClick={() => scrollToSection('about')} 
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-            >
-              About
-            </button>
-            <button 
-              onClick={() => scrollToSection('qualifications')} 
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-            >
-              Education
-            </button>
-            <button 
-              onClick={() => scrollToSection('experience')} 
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-            >
-              Experience
-            </button>
-            <button 
-              onClick={() => scrollToSection('skills')} 
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-            >
-              Skills
-            </button>
-            <button 
-              onClick={() => scrollToSection('ProfessionalQualifications')} 
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-            >
-              Qualifications
-            </button>
-            <button 
-              onClick={() => scrollToSection('PersonalProjects')} 
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-            >
-              Personal Projects
-            </button>
-            <button 
-              onClick={() => scrollToSection('projects')} 
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-            >
-              Uni Projects
-            </button>
-            <button 
-              onClick={() => scrollToSection('contact')} 
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-            >
-              Contact
-            </button>
+            {[
+              ['about', 'About'],
+              ['qualifications', 'Education'],
+              ['experience', 'Experience'],
+              ['skills', 'Skills'],
+              ['ProfessionalQualifications', 'Qualifications'],
+              ['PersonalProjects', 'Personal Projects'],
+              ['projects', 'Uni Projects'],
+              ['contact', 'Contact'],
+            ].map(([id, label]) => (
+              <button
+                key={id}
+                onClick={() => scrollToSection(id)}
+                className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              >
+                {label}
+              </button>
+            ))}
           </nav>
-          <button 
-            onClick={toggleTheme} 
+          <button
+            onClick={toggleTheme}
             className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
             aria-label="Toggle theme"
           >
@@ -123,10 +93,11 @@ const Header: React.FC = () => {
             )}
           </button>
         </div>
-        
+
+        {/* Mobile nav toggle */}
         <div className="flex items-center md:hidden">
-          <button 
-            onClick={toggleTheme} 
+          <button
+            onClick={toggleTheme}
             className="p-2 mr-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
             aria-label="Toggle theme"
           >
@@ -136,8 +107,8 @@ const Header: React.FC = () => {
               <Moon size={20} className="text-gray-700" />
             )}
           </button>
-          <button 
-            onClick={toggleMenu} 
+          <button
+            onClick={toggleMenu}
             className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
             aria-label="Toggle menu"
           >
@@ -149,62 +120,32 @@ const Header: React.FC = () => {
           </button>
         </div>
       </div>
-      
+
       {/* Mobile menu */}
-      <div 
+      <div
         className={`md:hidden fixed inset-0 z-40 bg-white dark:bg-gray-900 overflow-y-auto transition-transform duration-300 ease-in-out ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
         <div className="flex flex-col items-center pt-24 pb-12 space-y-8 text-xl">
-          <button 
-              onClick={() => scrollToSection('about')} 
+          {[
+            ['about', 'About'],
+            ['qualifications', 'Education'],
+            ['experience', 'Experience'],
+            ['skills', 'Skills'],
+            ['ProfessionalQualifications', 'Qualifications'],
+            ['PersonalProjects', 'Personal Projects'],
+            ['projects', 'Uni Projects'],
+            ['contact', 'Contact'],
+          ].map(([id, label]) => (
+            <button
+              key={id}
+              onClick={() => scrollToSection(id)}
               className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
-              About
+              {label}
             </button>
-            <button 
-              onClick={() => scrollToSection('qualifications')} 
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-            >
-              Education
-            </button>
-            <button 
-              onClick={() => scrollToSection('experience')} 
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-            >
-              Experience
-            </button>
-            <button 
-              onClick={() => scrollToSection('skills')} 
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-            >
-              Skills
-            </button>
-            <button 
-              onClick={() => scrollToSection('ProfessionalQualifications')} 
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-            >
-              Qualifications
-            </button>
-            <button 
-              onClick={() => scrollToSection('PersonalProjects')} 
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-            >
-              Personal Projects
-            </button>
-            <button 
-              onClick={() => scrollToSection('projects')} 
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-            >
-              Uni Projects
-            </button>
-            <button 
-              onClick={() => scrollToSection('contact')} 
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-            >
-              Contact
-            </button>
+          ))}
         </div>
       </div>
     </header>
