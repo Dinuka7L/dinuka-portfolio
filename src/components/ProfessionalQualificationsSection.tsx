@@ -131,14 +131,13 @@ function ProfessionalQualificationsSection() {
           className="flex gap-4 snap-x snap-mandatory overflow-x-auto px-4 py-10"
           style={{ scrollBehavior: "smooth" }}
         >
-          {cards.map((card, index) => (
-            <motion.div
-              layoutId={`card-${card.title}-${id}`}
-              key={`card-${card.title}-${id}`}
-              onClick={() => setActive(card)}
-              className="flex-none snap-center w-[80vw] sm:w-[calc(100%/2.5)] md:w-[calc(100%/3.5)] lg:w-[calc(100%/5)] transform hover:scale-105 transition-transform duration-300 cursor-pointer bg-white dark:bg-neutral-900 rounded-xl shadow-md"
-  
-            >
+          {cards.map((card) => (
+              <motion.div
+                layoutId={`card-${card.title}-${id}`}
+                key={`card-${card.title}-${id}`}
+                onClick={() => setActive(card)}
+                className="flex-none snap-center w-[80vw] sm:w-[calc(100%/2.5)] md:w-[calc(100%/3.5)] lg:w-[calc(100%/5)] transform hover:scale-105 transition-transform duration-300 cursor-pointer bg-white dark:bg-neutral-900 rounded-xl shadow-md"
+              >
               <div
                 className="h-full p-4 flex flex-col items-center justify-between"
               >
@@ -292,6 +291,23 @@ const cards = [
         <p>
           The Network Security Certificate was awarded to participants who underwent 3 day comprehensive training on network security principles and practices conducted during Lanka Network Operators Group(LkNOG8) in 2024.
           <br /> <br /> In this training, participants learned about various aspects of network security, including SIEM Implementation, Ethical Hacking, BGP Security.
+        
+        </p>
+      );
+    },
+  },
+  {
+    description: "Cisco",
+    title: "Introduction to cybersecurity",
+    src: "https://images.credly.com/size/680x680/images/af8c6b4e-fc31-47c4-8dcb-eb7a2065dc5b/I2CS__1_.png",
+    ctaText: "Verify",
+    ctaLink: "https://www.credly.com/badges/19fb4848-061c-4a40-9164-67f39deddf07/linked_in_profile",
+    content: () => {
+      return (
+        <p>
+          The "Cisco Introduction to Cybersecurity" course and its associated certification are entry-level offerings designed to provide individuals with a foundational understanding of cybersecurity concepts and practices.
+           <br /> <br /> It's suitable for anyone with a basic understanding of digital technology who wants to learn about cybercrime and how to protect themselves and organizations online. 
+          
         
         </p>
       );
