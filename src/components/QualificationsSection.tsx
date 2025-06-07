@@ -43,7 +43,7 @@ const educationData: Education[] = [
     location: 'Galle, Sri Lanka',
     year: '2010 - 2023',
     description: 'Completed GCE Advanced Level Examination with a focus on Commerce stream. Developed strong analytical and problem-solving skills through rigorous coursework in Accounting, Economics and IT subjects.',
-    grade: 'Grade: 3As, Z-Score: 2.5195, Island 7th, District 1st',
+    grade: 'Grade: 3As, Z-Score: 2.5195' ,
     logo: 'http://www.richmondcollege.lk/wp-content/uploads/2022/10/crest-copy.png',
     gradientColors: ['#00b4d8', '#0085fe','#c30025'] 
   }
