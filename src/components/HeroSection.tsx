@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowDown } from 'lucide-react';
 import TypewriterWithScramble from './TypewriterWithScramble';
 import resumePDF from '../assets/dinuka_liyanage_resume.pdf';
+import myfromalpicture from '../assets/Photo-Dinuka Liyanage-Formal.jpg';
 import { FlipWords } from "../ui/flip-words";
 import { MovingBorderImage  } from "../ui/moving-border";
 const flipWords1 = ["Cybersecurity", "Accounting & Finance", "Network Administration", "Software Development", "Workflow Automation", " Business Management", "Web Development"];
@@ -74,7 +75,7 @@ const HeroSection: React.FC = () => {
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end animate-fadeIn" style={{ animationDelay: '0.4s' }}>
             
             <MovingBorderImage
-  src="https://avatars.githubusercontent.com/u/179111403?v=4"
+  src={myfromalpicture} alt="https://avatars.githubusercontent.com/u/179111403?v=4"
   size={320}
   imageSize={280}
   borderWidth={1}
