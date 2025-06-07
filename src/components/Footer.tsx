@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
               <a href="#qualifications" className="text-gray-400 hover:text-blue-400 transition-colors">Education</a>
               <a href="#experience" className="text-gray-400 hover:text-blue-400 transition-colors">Experience</a>
               <a href="#skills" className="text-gray-400 hover:text-blue-400 transition-colors">Skills</a>
-              <a href="#ProfessionalQualifications" className="text-gray-400 hover:text-blue-400 transition-colors">Qualifications</a>
+              <a href="#Certifications" className="text-gray-400 hover:text-blue-400 transition-colors">Certifications</a>
               <a href="#PersonalProjects" className="text-gray-400 hover:text-blue-400 transition-colors">Personal Projects</a>
               <a href="#projects" className="text-gray-400 hover:text-blue-400 transition-colors">Uni Projects</a>
               <a href="#contact" className="text-gray-400 hover:text-blue-400 transition-colors">Contact</a>

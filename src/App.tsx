@@ -7,7 +7,7 @@ import SkillsSection from './components/SkillsSection';
 import MyProjectsSection from './components/MyProjectsSection';
 import ProjectsSection from './components/ProjectsSection';
 import ContactSection from './components/ContactSection';
-import ProfessionalQualificationsSection from './components/ProfessionalQualificationsSection';
+import Certifications from './components/ProfessionalQualificationsSection';
 import Footer from './components/Footer';
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
         <QualificationsSection />
         <ExperienceSection />
         <SkillsSection />
-        <ProfessionalQualificationsSection />
+        <Certifications />
         <MyProjectsSection />
         <ProjectsSection />
         <ContactSection />
