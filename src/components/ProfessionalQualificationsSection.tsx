@@ -233,7 +233,6 @@ const cards = [
     content: () => {
       return (
         <p>
-          Cisco Certified Network Associate(CCNA) Enterprise Networking, Security, and Automation
           <br /> <br />The "Postman API Fundamentals Student Expert" certification offered by Postman Academy verifies a student's understanding of APIs, their role in modern development, and how to use Postman to work with them.
            <br /> <br /> It covers topics like API basics, Postman's features, making requests, handling headers, and understanding response codes. 
           
