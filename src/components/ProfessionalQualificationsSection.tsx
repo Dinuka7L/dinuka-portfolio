@@ -229,7 +229,7 @@ const cards = [
     title: "Postman Student API Fundamentals Expert",
     src: "https://api.badgr.io/public/assertions/M_3RVyN3S8y1_dUFdC_Zlg/image",
     ctaText: "Verify",
-    ctaLink: "https://api.badgr.io/public/assertions/M_3RVyN3S8y1_dUFdC_Zlg?identity__email=dinuka.liyanage7%40gmail.comg",
+    ctaLink: "https://api.badgr.io/public/assertions/M_3RVyN3S8y1_dUFdC_Zlg?identity__email=dinuka.liyanage7%40gmail.com",
     content: () => {
       return (
         <p>
