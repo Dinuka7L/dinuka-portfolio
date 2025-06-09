@@ -21,7 +21,7 @@ const educationData: Education[] = [
     institutionUrl: 'https://www.ecu.edu.au/',
     location: 'Perth, Australia',
     year: '2022 - Present',
-    description: 'Currently pursuing a degree in Cybersecurity with a focus on network security and ethical hacking. Engaged in various projects related to cybersecurity threats and defenses.',
+    description: 'Currently pursuing a degree in Cybersecurity with a focus on areas of network security and ethical hacking. My studies are shaped by practical experiences and real-world applications, allowing me to develop a strong foundation in cybersecurity.',
     grade: 'GPA: 3.52/4.0',
     logo: 'https://www.ecu.edu.au/__data/assets/image/0004/1100389/ecu-logo.png',
     gradientColors: ['#00ffc9','#2563eb', '#1e3a8a','#4b00b4'] //Colors
@@ -32,7 +32,7 @@ const educationData: Education[] = [
     institutionUrl: 'https://www.sjp.ac.lk/',
     location: 'Colombo, Sri Lanka',
     year: '2025 - Present',
-    description: 'Currently pursuing a degree in Accounting and Finance. Gaining knowledge in financial analysis, accounting principles, and investment strategies.',
+    description: 'Currently pursuing a degree in Accounting and Finance. Gaining knowledge in how to become a great manager and a leader in the business world. My studies are focused on understanding financial systems, accounting principles, and strategic management.',
     logo: 'https://www.sjp.ac.lk/wp-content/uploads/2020/10/usjp-logo-500x500.png',
     gradientColors: ['#aa1900','#e20000', '#ffb700','#e9ad21'] //Colors
   },
@@ -42,7 +42,7 @@ const educationData: Education[] = [
     institutionUrl: 'http://www.richmondcollege.lk/',
     location: 'Galle, Sri Lanka',
     year: '2010 - 2023',
-    description: 'Completed GCE Advanced Level Examination with a focus on Commerce stream. Developed strong analytical and problem-solving skills through rigorous coursework in Accounting, Economics and IT subjects.',
+    description: 'Completed GCE Advanced Level Examination with a focus on Commerce stream. Developed strong analytical and problem-solving skills through extensive coursework in Accounting, Economics and IT subjects.',
     grade: 'Grade: 3As, Z-Score: 2.5195' ,
     logo: 'http://www.richmondcollege.lk/wp-content/uploads/2022/10/crest-copy.png',
     gradientColors: ['#00b4d8', '#0085fe','#c30025'] //Colors
@@ -59,8 +59,8 @@ const QualificationsSection: React.FC = () => {
             Education
           </h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            My education has been a journey of figuring things out, making mistakes, and pushing through even when things felt uncertain. I didn’t just follow a straight path — I explored, I questioned, and I found what really drives me. Learning became something personal, something I wanted to grow through, not just pass. If there’s one thing I’ve learned, it’s that you don’t have to wait for the perfect moment or follow a set script — you can start where you are and build your own way forward.
+          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-prose mx-auto px-4">
+            My education has been a journey of figuring things out by myself, making mistakes, and pushing through even when things felt uncertain. I didn’t just follow a traditional straight path. I explored, I questioned, and I found what really drives me. Learning became something personal, something I wanted to grow through, not just pass.<br/><br/> If there’s one thing I’ve learned, it’s that you don’t need to follow anyone's path. It doesn't have to make sense to others. If you believe in what's best for you, you can carve out your own way. This can be pretty risky but well worth it if you put in the work.
           </p>
         </div>
 
