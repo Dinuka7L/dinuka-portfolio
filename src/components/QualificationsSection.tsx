@@ -24,7 +24,7 @@ const educationData: Education[] = [
     description: 'Currently pursuing a degree in Cybersecurity with a focus on network security and ethical hacking. Engaged in various projects related to cybersecurity threats and defenses.',
     grade: 'GPA: 3.52/4.0',
     logo: 'https://www.ecu.edu.au/__data/assets/image/0004/1100389/ecu-logo.png',
-    gradientColors: ['#00ffc9','#2563eb', '#1e3a8a'] // Blue gradient
+    gradientColors: ['#00ffc9','#2563eb', '#1e3a8a','#4b00b4'] //Colors
   },
   {
     degree: 'Bachelor of Science in Accounting and Finance',
@@ -34,7 +34,7 @@ const educationData: Education[] = [
     year: '2025 - Present',
     description: 'Currently pursuing a degree in Accounting and Finance. Gaining knowledge in financial analysis, accounting principles, and investment strategies.',
     logo: 'https://www.sjp.ac.lk/wp-content/uploads/2020/10/usjp-logo-500x500.png',
-    gradientColors: ['#e20000','#be123c', '#ffb700'] // Rose-red gradient
+    gradientColors: ['#aa1900','#e20000', '#ffb700','#e9ad21'] //Colors
   },
   {
     degree: 'G.C.E. Advanced Level',
@@ -45,7 +45,7 @@ const educationData: Education[] = [
     description: 'Completed GCE Advanced Level Examination with a focus on Commerce stream. Developed strong analytical and problem-solving skills through rigorous coursework in Accounting, Economics and IT subjects.',
     grade: 'Grade: 3As, Z-Score: 2.5195' ,
     logo: 'http://www.richmondcollege.lk/wp-content/uploads/2022/10/crest-copy.png',
-    gradientColors: ['#00b4d8', '#0085fe','#c30025'] 
+    gradientColors: ['#00b4d8', '#0085fe','#c30025'] //Colors
   }
 ];
 
