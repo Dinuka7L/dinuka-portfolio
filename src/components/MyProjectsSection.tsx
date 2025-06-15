@@ -4,6 +4,7 @@ import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { useOutsideClick } from "../hooks/use-outside-click";
 import ArtemisLogo from '../assets/Artemis-Logo.jpg';
+import SentraFusionDashboardSS from '../assets/SF-Dashboard.png';
 
 
 function MyProjectsSection() {
@@ -216,6 +217,44 @@ export const CloseIcon = () => {
 };
 
 const cards = [
+  {
+    description: "SOC Management Platform",
+    title: "Sentra Fusion",
+    src: SentraFusionDashboardSS,
+    ctaText: "See Demo",
+    ctaLink: "https://dinuka7l.github.io/sentrafusion-soc/",
+    content: () => {
+      return (
+        <p>
+          <b>SOC RAG Assistant – AI-Powered Security Operations Companion</b><br /><br />
+          The <b>SOC RAG Assistant</b> is an innovative Retrieval-Augmented Generation (RAG) based web application designed to revolutionize how Security Operations Center (SOC) analysts investigate, escalate, and manage cyber incidents. Built using <b>React + Vite</b> for the front-end and easily integrable with any backend, this platform acts as an intelligent AI companion for analysts working with SIEM alerts, threat hunting, and incident response.<br /><br />
+
+          <b>Key Capabilities:</b><br />
+          - <b>Intelligent Alert Investigation:</b> <br />
+          AI-driven insights based on live knowledge bases, playbooks, and MITRE ATT&CK mappings to guide triage, escalation, and threat verification.<br /><br />
+
+          - <b>Shift Summary Automation:</b> <br />
+          Auto-generated shift handover summaries capturing open incidents, newly observed IoCs, pending actions, and critical updates—ensuring smooth transitions across analyst shifts.<br /><br />
+
+          - <b>Ticket and Case Management:</b> <br />
+          Centralized interface to view, escalate, and track incident tickets with historical context, supporting faster response and audit readiness.<br /><br />
+
+          - <b>Dynamic Knowledge Management:</b> <br />
+          Seamless integration with knowledge sources like playbooks, open cases (e.g., Google Sheets, Discord threads), ensuring up-to-date operational intelligence.<br /><br />
+
+          - <b>Custom Workspaces & Chat Interface:</b> <br />
+          Personalized, secure workspaces and AI chat environments tailored for individual analysts or teams, reducing context-switching and confusion.<br /><br />
+
+          <b>How It Helps SOC Teams:</b><br />
+          - Boosts analyst efficiency in triaging complex SIEM alerts.<br />
+          - Reduces investigation time with contextual threat enrichment and IOC lookups.<br />
+          - Improves shift communication and knowledge retention via structured summaries.<br />
+          - Enhances overall SOC maturity by automating repetitive decision support tasks.<br />
+
+        </p>
+      );
+    },
+  },
   {
     description: "Final Year Project",
     title: "ARTEMIS",
