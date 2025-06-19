@@ -4,6 +4,8 @@ import { AnimatePresence, motion } from "motion/react";
 import { useOutsideClick } from "../hooks/use-outside-click";
 import SentraFusionDashboardSS from '../assets/SF-Dashboard.png';
 import CountUp from '../ui/count-up'
+import { Link } from 'react-router-dom';
+
 
 
 function MyProjectsSection() {
@@ -13,26 +15,32 @@ function MyProjectsSection() {
   const id = useId();
   const ref = useRef<HTMLDivElement>(null);
 
+
   useEffect(() => {
-    function onKeyDown(event: KeyboardEvent) {
-      if (event.key === "Escape") {
-        setActive(false);
-      }
+  function onKeyDown(event: KeyboardEvent) {
+    if (event.key === "Escape") {
+      setActive(false);
     }
+  }
 
-    if (active && typeof active === "object") {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
+  if (active && typeof active === "object") {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "auto";
+  }
 
-    window.addEventListener("keydown", onKeyDown);
-    return () => window.removeEventListener("keydown", onKeyDown);
-  }, [active]);
+  window.addEventListener("keydown", onKeyDown);
+  return () => {
+    window.removeEventListener("keydown", onKeyDown);
+    document.body.style.overflow = "auto"; // ✅ Fix: Ensure scroll resets when component unmounts
+  };
+}, [active]);
 
   useOutsideClick(ref, () => setActive(null));
 
   return (
+
+    
     <section id="PersonalProjects" className="py-20 bg-white dark:bg-gray-900">
     <>
     
@@ -120,6 +128,14 @@ function MyProjectsSection() {
                     </motion.p>
                   </div>
 
+                  {active && typeof active.title === "string" && active.title === "SentraFusion" ? (
+                  <Link
+                    to="/sentrafusion"
+                    className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
+                  >
+                    {active.ctaText}
+                  </Link>
+                ) : (
                   <motion.a
                     layout
                     initial={{ opacity: 0 }}
@@ -127,10 +143,12 @@ function MyProjectsSection() {
                     exit={{ opacity: 0 }}
                     href={active.ctaLink}
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
                   >
                     {active.ctaText}
                   </motion.a>
+                )}
                 </div>
                 <div className="pt-4 relative px-4 flex-1 overflow-hidden">
                     <motion.div

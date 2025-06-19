@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'; // HashRouter without basename
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import QualificationsSection from './components/QualificationsSection';
@@ -10,7 +10,7 @@ import ProjectsSection from './components/ProjectsSection';
 import ContactSection from './components/ContactSection';
 import Certifications from './components/ProfessionalQualificationsSection';
 import Footer from './components/Footer';
-import SentraFusionPage from './pages/sentrafusion'; // 👈 renamed for proper PascalCase (React convention)
+import SentraFusionPage from './pages/sentrafusion'; 
 
 function App() {
   useEffect(() => {
@@ -18,11 +18,10 @@ function App() {
   }, []);
 
   return (
-    <Router basename="/dinuka-portfolio"> {/* 👈 Important fix */}
+    <Router> {/* Removed basename */}
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
         <Header />
         <Routes>
-          {/* All main page sections rendered in "/" route */}
           <Route
             path="/"
             element={
