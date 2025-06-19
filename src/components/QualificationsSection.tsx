@@ -1,5 +1,6 @@
 import React from 'react';
 import { Calendar, MapPin } from 'lucide-react';
+import SplitText from "../ui/split-text";
 
 
 type Education = {
@@ -56,7 +57,17 @@ const QualificationsSection: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
-            Education
+            <SplitText
+            text="My Education"
+            className="text-2xl font-semibold text-center"
+            delay={100}
+            duration={0.6}
+            ease="power3.out"
+            splitType="chars"
+            from={{ opacity: 0, y: 40 }}
+            to={{ opacity: 1, y: 0 }}
+            textAlign="center"
+          />
           </h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-prose mx-auto px-4">

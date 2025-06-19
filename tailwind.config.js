@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'], // Make sure all your source files are covered here
   darkMode: 'class',
   theme: {
     extend: {
@@ -16,7 +16,7 @@ export default {
           700: '#1d4ed8',
           800: '#1e40af',
           900: '#1e3a8a',
-        }
+        },
       },
       fontFamily: {
         sans: [
@@ -37,16 +37,28 @@ export default {
         '96': '24rem',
       },
       boxShadow: {
-        'soft': '0 5px 15px rgba(0, 0, 0, 0.05)',
-        'hard': '0 10px 25px rgba(0, 0, 0, 0.1)',
+        soft: '0 5px 15px rgba(0, 0, 0, 0.05)',
+        hard: '0 10px 25px rgba(0, 0, 0, 0.1)',
       },
       transitionDuration: {
-        '2000': '2000ms',
+        2000: '2000ms',
       },
       animation: {
-        'fadeIn': 'fadeIn 1s ease-out forwards',
-        'slideInLeft': 'slideInFromLeft 0.8s ease-out forwards',
-        'slideInRight': 'slideInFromRight 0.8s ease-out forwards',
+        fadeIn: 'fadeIn 1s ease-out forwards',
+        slideInLeft: 'slideInFromLeft 0.8s ease-out forwards',
+        slideInRight: 'slideInFromRight 0.8s ease-out forwards',
+        aurora: 'aurora 60s linear infinite',
+      },
+      keyframes: {
+        aurora: {
+          from: {
+            backgroundPosition: '50% 50%, 50% 50%',
+          },
+          to: {
+            backgroundPosition: '350% 50%, 350% 50%',
+          },
+        },
+        // Add other keyframes if needed
       },
       container: {
         padding: {

@@ -30,6 +30,23 @@
 }
 
 
+/* Aurora animation pure CSS */
+@keyframes aurora {
+  from {
+    background-position: 50% 50%, 50% 50%;
+  }
+  to {
+    background-position: 350% 50%, 350% 50%;
+  }
+}
+
+.aurora-animate {
+  animation: aurora 60s linear infinite;
+}
+
+
+
+
 
 .animate-wave {
   animation: wave 2.5s infinite;

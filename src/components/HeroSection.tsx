@@ -6,7 +6,7 @@ import myfromalpicture from '../assets/Photo-Dinuka Liyanage-Formal.jpg';
 import { FlipWords } from "../ui/flip-words";
 import { MovingBorderImage  } from "../ui/moving-border";
 const flipWords1 = ["Cybersecurity", "Accounting & Finance", "Network Administration", "Software Development", "Workflow Automation", " Business Management", "Web Development"];
-
+import CountUp from '../ui/count-up'
 
 
 const HeroSection: React.FC = () => {
@@ -41,7 +41,8 @@ const HeroSection: React.FC = () => {
             <h2 className="text-xl md:text-2xl font-medium mb-6 text-gray-700 dark:text-gray-300">
               I specialize in<FlipWords words={flipWords1} />
             </h2>
-            
+
+
             <p className="text-lg mb-8 text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl">
               Welcome to my portfolio! I'm a passionate undergraduate with a goal of reaching information security & management fields. 
               With a strong academic background and professional experience, I'm learning and implementing robust cybersecurity solutions. I'm dedicated to creating a safer digital space to live in, through information security.

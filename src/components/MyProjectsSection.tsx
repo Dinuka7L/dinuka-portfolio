@@ -1,10 +1,9 @@
 "use client";
-
 import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { useOutsideClick } from "../hooks/use-outside-click";
-import ArtemisLogo from '../assets/Artemis-Logo.jpg';
 import SentraFusionDashboardSS from '../assets/SF-Dashboard.png';
+import CountUp from '../ui/count-up'
 
 
 function MyProjectsSection() {
@@ -43,12 +42,19 @@ function MyProjectsSection() {
                 Personal Projects
                 </h2>
                 <div className="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
-                <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-                  This section contains my personal projects.
-                </p>
+                 <h2 className="text-xl md:text-2xl font-medium mb-6 text-gray-700 dark:text-gray-300">
+              I have built over <CountUp
+                              from={0}
+                              to={12}
+                              separator=","
+                              direction="up"
+                              duration={0.5}
+                              className="count-up-text"
+                            />&nbsp;pretty interesting projects and counting! More updates on the way!
+                </h2>
               </div>
       </div>
-      <AnimatePresence>
+      <AnimatePresence> 
         {active && typeof active === "object" && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -218,11 +224,11 @@ export const CloseIcon = () => {
 
 const cards = [
   {
-    description: "SOC Management Platform",
-    title: "Sentra Fusion",
+    description: "Next-Gen SOC Management Platform",
+    title: "SentraFusion",
     src: SentraFusionDashboardSS,
-    ctaText: "See Demo",
-    ctaLink: "https://dinuka7l.github.io/sentrafusion-soc/",
+    ctaText: "See Project",
+    ctaLink: "/dinuka-portfolio/sentrafusion",
     content: () => {
       return (
         <p>
@@ -251,29 +257,6 @@ const cards = [
           - Improves shift communication and knowledge retention via structured summaries.<br />
           - Enhances overall SOC maturity by automating repetitive decision support tasks.<br />
 
-        </p>
-      );
-    },
-  },
-  {
-    description: "Final Year Project",
-    title: "ARTEMIS",
-    src: ArtemisLogo,
-    ctaText: "GitHub",
-    ctaLink: "https://github.com/Dinuka7L/Artemis-NSAT",
-    content: () => {
-      return (
-        <p>
-          ARTEMIS is a Network Security Automation Toolkit which is built to automate security . < br /> < br />
-
-          Our application’s focus is to improve the security of a network and its network devices in a Small to Medium Enterprise (SMEs) by streamlining compliance checks, device management, security control implementation, and reporting.
-          ARTEMIS is a Network Security Automation Toolkit which is built to automate security .  < br /> < br />
-          This application is a CLI console-based application. Our application’s focus is to improve the security of a network and its network devices in a Small to Medium Enterprise (SMEs) by streamlining compliance checks, device management, security control implementation, and reporting.
-          ARTEMIS is built using Python 3.13 and can be launched on any platform which is compatible with running python. Built with a modular, scalable architecture for easy integration and future developments, ARTEMIS is designed to adapt and grow with your security needs.
-          ARTEMIS is not just a tool to use. It’s a strategic advantage. Designed with industry trends and efficiency in mind, It transforms manual error-prone security tasks into seamless, automated workflows. Whether you are a network administrator, security analyst, or SME business owner, ARTEMIS equips you with the tools and insights necessary to stay ahead of evolving cyber threats. < br />
-          Aim & Vision < br /> < br />
-          Our Aim: < br /> Automate networking and network security configurations by enforcing security compliance checks and reducing human error in network administration. < br /> < br />
-          Our Vision: < br />  < br />To develop an application which is capable of fully automating the security aspects of a Network within a Small to Medium Enterprise and safeguard network against network vulnerabilities.
         </p>
       );
     },

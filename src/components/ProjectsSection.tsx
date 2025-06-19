@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { ExternalLink, Github, Code } from 'lucide-react';
+import ArtemisLogo from '../assets/Artemis-Logo-Colorful.png';
+
+
 
 type Project = {
   id: number;
@@ -48,7 +51,7 @@ const projectsData: Project[] = [
     title: 'Malware Reversing and Analysis',
     description: 'A complete malware reversing and analysis project that involved static and dynamic analysis, reverse engineering, and reporting on a Banking Trojan.',
     image: 'https://plus.unsplash.com/premium_photo-1714618835760-5b2175ad3249?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWFsd2FyZXxlbnwwfHwwfHx8MA%3D%3D',
-    tags: ['IDA Pro', 'Malware Analysis', 'Reverse Engineering', 'Banking Trojan', 'Cybersecurity'],
+    tags: ['IDA Pro', 'Malware Analysis', 'Reverse Engineering', 'Cybersecurity'],
     liveUrl: 'https://example.com',
     githubUrl: 'https://github.com',
     featured: true
@@ -98,11 +101,21 @@ const projectsData: Project[] = [
     title: 'Database Design and Implementation',
     description: 'Design and implementation of a relational database system using MySQL, including schema design, normalization, and query optimization.',
     image: 'https://png.pngtree.com/thumb_back/fh260/background/20220712/pngtree-database-concept-database-on-digital-background-information-copy-base-photo-image_25012500.jpg',
-    tags: ['MySQL', 'Database Design', 'SQL', 'Data Management', 'Relational Database', 'Database'],
+    tags: ['MySQL', 'SQL', 'Data Management', 'Database'],
     liveUrl: 'https://example.com',
     githubUrl: 'https://github.com',
     featured: false
-  }
+  },
+  {
+    id: 10,
+    title: 'ARTEMIS',
+    description: 'Network Security Automation Toolkit which is built to automate security ',
+    image: ArtemisLogo,
+    tags: ['Python', 'Network Security', 'Automation', 'Cybersecurity', 'Security Tools'],
+    liveUrl: 'https://example.com',
+    githubUrl: 'https://github.com/Dinuka7L/Artemis-NSAT',
+    featured: false
+  },
 ];
 
 const ProjectsSection: React.FC = () => {
