@@ -14,7 +14,7 @@ import wraith_directory_stucture from '../assets/wraith-directory-structure.png'
 import wraith_desktop_apps_captured from '../assets/wraith-desktop-apps-captured.png'
 import pythonLogo from '../assets/python-logo.png';
 import wraith_key_strokes from '../assets/wraith-key-strokes.png';
-
+import backgroundImage from '../assets/wraith_ghost_gen.png';
 
 
 
@@ -108,7 +108,15 @@ const KeyloggerProjectShowcase: React.FC = () => {
   };
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-800 to-gray-900 text-gray-200 p-8">
+       {/* Background Image with Gradient Overlay */}
+      <div
+        className="absolute top-0 left-0 w-full h-96 bg-cover bg-center opacity-50 z-0"
+        style={{
+          backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0, 0, 0, 0.9)), url(${backgroundImage})`
+        }}
+      ></div>
       {/* Project Title & Capabilities */}
+      <div className="relative z-10">
       <section className="text-center mb-12 pt-24">
         <h1 className="text-4xl font-bold mb-4 glassy p-4 rounded-2xl shadow-xl">
             Project Wraith - Python Keylogger
@@ -117,6 +125,7 @@ const KeyloggerProjectShowcase: React.FC = () => {
             Capabilities: Captures keyboard strokes, screenshots, recently accessed files, logs to a file, stealth mode operation, customizable exfiltrations.
         </p>
         </section>
+        
 
       {/* Built With */}
       <section className="flex justify-center items-center space-x-6 mb-12">
@@ -126,6 +135,7 @@ const KeyloggerProjectShowcase: React.FC = () => {
           <img src= {pythonLogo} alt="Python Logo" className="w-12 h-12" />
         </div>
       </section>
+      </div>
 
       {/* Timeline Steps */}
       <section className="relative max-w-5xl mx-auto">
