@@ -10,7 +10,8 @@ import ProjectsSection from './components/ProjectsSection';
 import ContactSection from './components/ContactSection';
 import Certifications from './components/ProfessionalQualificationsSection';
 import Footer from './components/Footer';
-import SentraFusionPage from './pages/sentrafusion'; 
+import SentraFusionPage from './pages/sentrafusion';
+import KeyloggerProjectShowcase from './pages/project-wraith'; 
 
 function App() {
   useEffect(() => {
@@ -39,6 +40,7 @@ function App() {
             }
           />
           <Route path="/sentrafusion" element={<SentraFusionPage />} />
+          <Route path="/project-wraith" element={<KeyloggerProjectShowcase />} />
         </Routes>
       </div>
     </Router>

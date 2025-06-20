@@ -5,7 +5,7 @@ import { useOutsideClick } from "../hooks/use-outside-click";
 import SentraFusionDashboardSS from '../assets/SF-Dashboard.png';
 import CountUp from '../ui/count-up'
 import { Link } from 'react-router-dom';
-
+import wraith_bg from '../assets/wraith_ghost_gen.png';
 
 
 function MyProjectsSection() {
@@ -129,26 +129,33 @@ function MyProjectsSection() {
                   </div>
 
                   {active && typeof active.title === "string" && active.title === "SentraFusion" ? (
-                  <Link
-                    to="/sentrafusion"
-                    className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
-                  >
-                    {active.ctaText}
-                  </Link>
-                ) : (
-                  <motion.a
-                    layout
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    href={active.ctaLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
-                  >
-                    {active.ctaText}
-                  </motion.a>
-                )}
+                    <Link
+                      to="/sentrafusion"
+                      className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
+                    >
+                      {active.ctaText}
+                    </Link>
+                  ) : active && typeof active.title === "string" && active.title === "Wraith" ? (
+                    <Link
+                      to="/project-wraith"
+                      className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
+                    >
+                      {active.ctaText}
+                    </Link>
+                  ) : (
+                    <motion.a
+                      layout
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      href={active.ctaLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
+                    >
+                      {active.ctaText}
+                    </motion.a>
+                  )}
                 </div>
                 <div className="pt-4 relative px-4 flex-1 overflow-hidden">
                     <motion.div
@@ -276,6 +283,50 @@ const cards = [
           - Enhances overall SOC maturity by automating repetitive decision support tasks.<br />
 
         </p>
+      );
+    },
+  },
+  {
+    description: "Advanced Keylogger",
+    title: "Wraith",
+    src: wraith_bg,
+    ctaText: "See Project",
+    ctaLink: "/dinuka-portfolio/project-wraith",
+    content: () => {
+      return (
+        <p>
+          <b>Python-Based Multi-Function Keylogger – Stealth Data Collection & Reporting Utility</b><br /><br />
+          The <b>Python-Based Keylogger Tool</b> is an advanced system monitoring and data collection utility designed for educational, research, and controlled environment security auditing. This tool leverages Python's native libraries alongside OS-level APIs to silently capture user activities, providing detailed reports via scheduled email notifications.<br /><br />
+
+          <b>Key Capabilities:</b><br />
+          - <b>Keystroke Logging:</b> <br />
+          Seamlessly captures all keystrokes typed by the user, preserving spaces and special keys, and saves the logs both within the report and as a separate text file attachment for review.<br /><br />
+
+          - <b>Screenshot Capture on Active Window Change:</b> <br />
+          Automatically takes screenshots when the user switches between applications to ensure only relevant screen captures are stored and reported, minimizing unnecessary data.<br /><br />
+
+          - <b>Directory Structure Mapping:</b> <br />
+          Generates a controlled-depth directory tree with limits on subfolder exploration and file types (configurable extensions such as PDF, JPG, DOCX, PPTX), ensuring concise and manageable directory reports.<br /><br />
+
+          - <b>Quick Access Recent Files Listing:</b> <br />
+          Retrieves the last accessed files specifically from the user's Quick Access (Recent Files) library, filtering out background or system process files for accurate user activity representation.<br /><br />
+
+          - <b>Desktop Applications Enumeration:</b> <br />
+          Lists files and shortcuts present on the user's desktop, giving insight into visible applications and user preferences.<br /><br />
+
+          - <b>System Information Gathering:</b> <br />
+          Collects essential system details such as hostname, IP address, processor type, and operating system information for complete environment context.<br /><br />
+
+          - <b>WiFi Password Extraction:</b> <br />
+          Optionally extracts saved WiFi network names and passwords from the system for wireless network auditing purposes.<br /><br />
+
+          <b>How It Helps in Controlled Environments:</b><br />
+          - Demonstrates Python-based stealth data collection techniques for cybersecurity research.<br />
+          - Useful for system monitoring, forensic training, and behavior analysis in ethical hacking labs.<br />
+          - Educates on responsible handling of sensitive information and data protection mechanisms.<br />
+          - Showcases modular development with configurable features such as file type filtering and depth-controlled directory scanning.<br />
+        </p>
+
       );
     },
   },
