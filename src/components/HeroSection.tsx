@@ -1,12 +1,12 @@
 import React from 'react';
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 import TypewriterWithScramble from './TypewriterWithScramble';
 import resumePDF from '../assets/dinuka_liyanage_resume.pdf';
 import myfromalpicture from '../assets/Photo-Dinuka Liyanage-Formal.jpg';
 import { FlipWords } from "../ui/flip-words";
 import { MovingBorderImage  } from "../ui/moving-border";
 const flipWords1 = ["Cybersecurity", "Accounting & Finance", "Network Administration", "Software Development", "Workflow Automation", " Business Management", "Web Development"];
-import CountUp from '../ui/count-up'
+
 
 
 const HeroSection: React.FC = () => {
@@ -69,6 +69,31 @@ const HeroSection: React.FC = () => {
                 className="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
               >
                 Download My Resume
+              </a>
+            </div>
+            {/* Social Media Links */}
+            <div className="flex gap-6 mt-8">
+              <a 
+                href="https://github.com/Dinuka7L" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-600 dark:text-gray-300 hover:text-blue-600 transition"
+              >
+                <Github size={28} />
+              </a>
+              <a 
+                href="https://www.linkedin.com/in/dinuka-liyanage/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-600 dark:text-gray-300 hover:text-blue-600 transition"
+              >
+                <Linkedin size={28} />
+              </a>
+              <a 
+                href="mailto:dinuka.liyanage7@gmail.com" 
+                className="text-gray-600 dark:text-gray-300 hover:text-blue-600 transition"
+              >
+                <Mail size={28} />
               </a>
             </div>
           </div>
