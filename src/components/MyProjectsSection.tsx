@@ -6,7 +6,7 @@ import SentraFusionDashboardSS from '../assets/SF-Dashboard.png';
 import CountUp from '../ui/count-up'
 import { Link } from 'react-router-dom';
 import wraith_bg from '../assets/wraith_ghost_gen.png';
-
+import DogGenAPI from '../assets/DogGenAPI.png';
 
 function MyProjectsSection() {
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
@@ -331,6 +331,20 @@ const cards = [
     },
   },
   {
+    description: "Using Dog API",
+    title: "Dog Image Generator",
+    src: DogGenAPI,
+    ctaText: "Visit",
+    ctaLink: "https://dinuka7l.github.io/dog-image-generator-api/",
+    content: () => {
+      return (
+        <p>
+          This is a fun project that uses the public Dog API to fetch and display random dog images. Built with CSS,HTML and JS, it demonstrates how to work with external APIs, handle asynchronous requests, and update UI dynamically. Users can click a button to generate a new random dog image each time, making it a playful way to learn about API integration and state management in React.
+        </p>
+      );
+    },
+  },
+  {
     description: "Password Stealing Script",
     title: "Dark Spectre",
     src: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/47a1cf8e-8afb-4e9f-8ba6-ec76621da837/d8qe5db-c95996ea-e987-4c0e-9343-759074fc1966.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ3YTFjZjhlLThhZmItNGU5Zi04YmE2LWVjNzY2MjFkYTgzN1wvZDhxZTVkYi1jOTU5OTZlYS1lOTg3LTRjMGUtOTM0My03NTkwNzRmYzE5NjYuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.6MT22J4jLhKxIhVnB5wMaR4r-ol_x72VunpWZaJU0VM",
@@ -346,7 +360,6 @@ const cards = [
       );
     },
   },
-
   {
     description: "Workflow Automation",
     title: "Work Mode",
