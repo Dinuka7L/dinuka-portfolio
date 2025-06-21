@@ -339,7 +339,8 @@ const cards = [
     content: () => {
       return (
         <p>
-          This is a fun project that uses the public Dog API to fetch and display random dog images. Built with CSS,HTML and JS, it demonstrates how to work with external APIs, handle asynchronous requests, and update UI dynamically. Users can click a button to generate a new random dog image each time, making it a playful way to learn about API integration and state management in React.
+          This is a fun project that uses the public Dog API to fetch and display random dog images. Built with CSS,HTML and JS, it demonstrates how to work with external APIs, handle asynchronous requests, and update UI dynamically.
+           Users can click a button to generate a new random dog image each time, making it a playful way to learn about API integration.
         </p>
       );
     },
