@@ -5,7 +5,7 @@ import resumePDF from '../assets/dinuka_liyanage_resume.pdf';
 import myfromalpicture from '../assets/Photo-Dinuka Liyanage-Formal.jpg';
 import { FlipWords } from "../ui/flip-words";
 import { MovingBorderImage  } from "../ui/moving-border";
-const flipWords1 = ["Cybersecurity", "Accounting & Finance", "Network Administration", "Software Development", "Workflow Automation", " Business Management", "Web Development"];
+const flipWords1 = ["Information Security", "Accounting & Finance", "Computer Network & Architecture", "Software Development", "Workflow Automation", " Business Management", "Web Application Development","AI-Agent Development"];
 
 
 
@@ -32,25 +32,25 @@ const HeroSection: React.FC = () => {
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-gray-900 dark:text-white">
               Hi, I'm <span className="text-blue-600 dark:text-blue-400">
-                <TypewriterWithScramble text="Dinuka Liyanage" typeSpeed={50} deleteSpeed={30} pauseTime={4000} />
+                <TypewriterWithScramble text="Dinuka Liyanage" typeSpeed={100} deleteSpeed={60} pauseTime={6000} />
 
               </span>
 
             </h1>
             
-            <h2 className="text-xl md:text-2xl font-medium mb-6 text-gray-700 dark:text-gray-300">
+            <h2 className="text-xl md:text-2xl font-medium mb-6 text-gray-700 dark:text-gray-100">
               I specialize in<FlipWords words={flipWords1} />
             </h2>
 
 
             <p className="text-lg mb-8 text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl">
-              Welcome to my portfolio! I'm a passionate undergraduate with a goal of reaching information security & management fields. 
-              With a strong academic background and professional experience, I'm learning and implementing robust cybersecurity solutions. I'm dedicated to creating a safer digital space to live in, through information security.
+              Welcome to my portfolio. I'm a driven undergraduate with a goal of reaching information security & management fields building practical solutions. 
+              With a strong academic background and professional experience, I'm continously learning and implementing robust cybersecurity solutions that help the world to be a little bit better.
             </p>
             
             <div className="flex flex-wrap gap-4">
               <button 
-                onClick={() => scrollToSection('projects')}
+                onClick={() => scrollToSection('PersonalProjects')}
                 className="px-6 py-3 bg-transparent border-2 border-blue-600 text-blue-600 dark:text-blue-400 hover:bg-blue-600/10 font-medium rounded-lg transition-colors"
               >
                 View My Work

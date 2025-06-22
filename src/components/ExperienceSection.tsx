@@ -18,27 +18,27 @@ const experienceData: Experience[] = [
     location: 'Colombo, Sri Lanka',
     period: 'May 2025 - Present',
     description: [
-      'Monitored network traffic for security threats and vulnerabilities',
+      'Actively hunt for security threats and vulnerabilities using security tools and threat intelligence platforms.',
       'Incident response and analysis of security breaches',
-      'Familiar with cybersecurity tools such as SIEM, XDR, and EDR.',
-      'Worked within the SOC team to enhance incident detection of major clients such as Banks and Public Companies .',
+      'Familiarity with cybersecurity tools such as SIEM, XDR, and EDR.',
+      'Worked within the SOC to for incident detection and escalation',
     ],
-    technologies: ['SIEM', 'EDR', 'XDR', 'FortiSIEM', 'LogRythm', 'Security Operations Center (SOC)', 'Stellar XDR', 'Microsoft Sentinel'],
+    technologies: ['SIEM', 'EDR', 'XDR', 'FortiSIEM', 'LogRythm', 'Security Operations Center (SOC)', 'Stellar XDR', 'Microsoft Sentinel', 'Threat Intelligence'],
     companyWebsite: 'https://www.crypto-gen.com/'
   },
   {
-    title: 'Vibe Coder',
+    title: 'Solution-Focused Developer (Vibe Coder)',
     company: 'Me, myself and I',
-    location: 'Galle, Sri Lanka',
-    period: '2015 -  Present',
+    location: 'Anywhere & Everywhere',
+    period: 'Continous',
     description: [
-      'This Portfolio is a showcase of my personal projects and coding journey. P.S. I made this portfolio with AI. Under an hour.',
-      'Developed various web applications and tools to enhance my coding skills.',
-      'I have developed custom scripts and applications to automate tasks and improve productivity for ex: Password Retrieval Malware using AutoIT, File Encryption and Decryption Tool using Python, etc.',
-      'I usually work on personal projects to learn new technologies and improve my coding skills.',
-      'Even though my domain is Cybersecurity, I have a passion for coding and enjoy creating software solutions.',
+      'Currently engineering real-world business process automation solutions, including RAG-based applications and autonomous AI agents designed for enterprise-grade deployment.',
+      'Designed and built full-stack web applications and internal tools to continuously sharpen my software development skills.',
+      'Hands-on experience in both Blue Team (defensive) and Red Team (offensive) operations, utilizing custom-built lab and sandbox environments for simulated cyber warfare.',
+      'Constantly exploring and prototyping emerging technologies through personal projects, with a focus on scalability, automation, and systems thinking.',
+      'While cybersecurity remains my core expertise, I actively design and engineer end-to-end technical solutions for solving real-world business and operational challenges.',
     ],
-    technologies: ['Bolt AI', 'Python', 'AutoIT', 'MySQL', 'LLMs', 'GitHub'],
+    technologies: ['Agentic AI', 'Python', 'IT Automation', 'Cloud-Based Services', 'LLMs', 'Version Control', 'API Development & Integration','Infrastructure as Code (IaC)', 'Containerization'],
     companyWebsite: ''
   }
   

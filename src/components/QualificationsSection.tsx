@@ -22,7 +22,7 @@ const educationData: Education[] = [
     institutionUrl: 'https://www.ecu.edu.au/',
     location: 'Perth, Australia',
     year: '2022 - Present',
-    description: 'Currently pursuing a degree in Cybersecurity with a focus on areas of network security and ethical hacking. My studies are shaped by practical experiences and real-world applications, allowing me to develop a strong foundation in cybersecurity.',
+    description: 'Final year undergrad in Cybersecurity with a focus on mastering skills on digital security.Shaped by practical experiences and real-world applications, allowing myselft to apply theories into practical implementations',
     grade: 'GPA: 3.52/4.0',
     logo: 'https://www.ecu.edu.au/__data/assets/image/0004/1100389/ecu-logo.png',
     gradientColors: ['#00ffc9','#2563eb', '#1e3a8a','#4b00b4'] //Colors
@@ -33,7 +33,7 @@ const educationData: Education[] = [
     institutionUrl: 'https://www.sjp.ac.lk/',
     location: 'Colombo, Sri Lanka',
     year: '2025 - Present',
-    description: 'Currently pursuing a degree in Accounting and Finance. Gaining knowledge in how to become a great manager and a leader in the business world. My studies are focused on understanding financial systems, accounting principles, and strategic management.',
+    description: 'In the world of power and precision, no man is truly a man if he cannot read the language of money. Currently pursuing a degree in Accounting and Finance, sharpening my mind to deal with financial systems, master accounting principles, and command the art of strategic management. I believe they are the foundation of becoming a great leader and a mastermind in the business world.',
     logo: 'https://www.sjp.ac.lk/wp-content/uploads/2020/10/usjp-logo-500x500.png',
     gradientColors: ['#aa1900','#e20000', '#ffb700','#e9ad21'] //Colors
   },
@@ -86,12 +86,8 @@ const QualificationsSection: React.FC = () => {
   key={index}
   className={`relative mb-12 md:mb-16 ${
     index % 2 === 0 ? 'md:pr-8 md:text-right md:ml-auto' : 'md:pl-8 md:mr-auto'
-  } md:w-1/2`}
->
-  {/* Timeline dot */}
-  <div className={`absolute top-0 ${
-    index % 2 === 0 ? 'left-0 md:left-auto md:-right-3' : 'left-0 md:-left-3'
-  } w-6 h-6 rounded-full bg-blue-600 border-4 border-white dark:border-gray-900`}></div>
+  } md:w-1/2`}>
+ 
 
   {/* Gradient Border Card */}
   <div
