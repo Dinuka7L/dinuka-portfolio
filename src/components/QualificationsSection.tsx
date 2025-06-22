@@ -22,7 +22,7 @@ const educationData: Education[] = [
     institutionUrl: 'https://www.ecu.edu.au/',
     location: 'Perth, Australia',
     year: '2022 - Present',
-    description: 'Final year undergrad in Cybersecurity with a focus on mastering skills on digital security.Shaped by practical experiences and real-world applications, allowing myselft to apply theories into practical implementations',
+    description: 'Final year undergrad in Cybersecurity with a focus on mastering skills on offensive and defensive security. Shaped by practical experiences and real-world applications, allowing myself to apply theories into practical implementations.',
     grade: 'GPA: 3.52/4.0',
     logo: 'https://www.ecu.edu.au/__data/assets/image/0004/1100389/ecu-logo.png',
     gradientColors: ['#00ffc9','#2563eb', '#1e3a8a','#4b00b4'] //Colors
