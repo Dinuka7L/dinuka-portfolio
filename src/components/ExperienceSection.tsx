@@ -18,10 +18,10 @@ const experienceData: Experience[] = [
     location: 'Colombo, Sri Lanka',
     period: 'May 2025 - Present',
     description: [
-      'Actively hunt for security threats and vulnerabilities using security tools and threat intelligence platforms.',
-      'Incident response and analysis of security breaches',
-      'Familiarity with cybersecurity tools such as SIEM, XDR, and EDR.',
-      'Worked within the SOC to for incident detection and escalation',
+      'Actively Hunt for Security Threats and Vulnerabilities using Security Tools and Threat Intelligence Platforms.',
+      'Incident Response and Analysis of Security Breaches.',
+      'Expertise with SOC Tools - SIEM, XDR, and EDR and SOAR.',
+      'SOC Operations - Incident Detection and Escalation.',
     ],
     technologies: ['SIEM', 'EDR', 'XDR', 'FortiSIEM', 'LogRythm', 'Security Operations Center (SOC)', 'Stellar XDR', 'Microsoft Sentinel', 'Threat Intelligence'],
     companyWebsite: 'https://www.crypto-gen.com/'
