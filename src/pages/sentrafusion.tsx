@@ -46,7 +46,7 @@ const ProjectSentraFusionPage: React.FC = () => {
             className="text-4xl md:text-6xl font-bold mb-4 text-center relative inline-block"
             style={{
               background:
-                'linear-gradient(120deg, rgba(255,255,255,0) 40%, rgba(255, 255, 255, 0.91) 60%, rgba(255,255,255,0) 70%)',
+                'linear-gradient(120deg, rgba(255,255,255,0) 40%, rgba(255, 255, 255, 0.91) 70%, rgba(255,255,255,0) 80%)',
               backgroundSize: '200% 100%',
               WebkitBackgroundClip: 'text',
               backgroundClip: 'text',
