@@ -44,8 +44,9 @@ const HeroSection: React.FC = () => {
 
 
             <p className="text-lg mb-8 text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl">
-              Welcome to my portfolio. I'm a driven undergraduate with a goal of reaching information security & management fields building practical solutions. 
-              With a strong academic background and professional experience, I'm continously learning and implementing robust cybersecurity solutions that help the world to be a little bit better.
+              "Those who settle for the ordinary will never touch the extraordinary."<br/><br/>
+              I'm someone on a mission. Not to be ordinary. Not even to be exceptional. I’m here to do the impossible, the unthinkable, the best of the best in Information Security and Business Management.
+              Armed with a strong academic backbone, real-world experience, and a restless urge to question everything, I’m constantly learning, sharpening, testing, shaping cybersecurity solutions that make the digital world not just safer but better.
             </p>
             
             <div className="flex flex-wrap gap-4">
