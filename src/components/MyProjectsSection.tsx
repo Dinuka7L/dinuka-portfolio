@@ -7,6 +7,7 @@ import CountUp from '../ui/count-up'
 import { Link } from 'react-router-dom';
 import wraith_bg from '../assets/wraith_ghost_gen.png';
 import DogGenAPI from '../assets/DogGenAPI.png';
+import AcademiaSS1 from '../assets/Academia-SS-1.png';
 
 function MyProjectsSection() {
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
@@ -282,6 +283,31 @@ const cards = [
           - Improves shift communication and knowledge retention via structured summaries.<br />
           - Enhances overall SOC maturity by automating repetitive decision support tasks.<br />
 
+        </p>
+      );
+    },
+  },
+  {
+    description: "Stateless Quiz Platform for batchmates",
+    title: "Academia",
+    src: AcademiaSS1,
+    ctaText: "Try it out",
+    ctaLink: "https://itc1370-lms-quiz.vercel.app/",
+    content: () => {
+      return (
+        <p>
+          <b>The Academia Quiz LMS Platform Help Students Face Exam with more confidence and readiness</b><br /><br />
+          The <b>Academia</b> is a stateless(all information processed on client-side) LMS web application I built to help my peer fellow students prepare for their IT Exam in the Management Program of the FMSC at USJ<br /><br />
+          <b>Key Capabilities:</b><br /><br />
+          <b>Real Exam Feels, Without the Pressure:</b>
+          <p>I created an enviorment to simulate<b>exam-based quizzes</b> that mimics the real exam. So it isn't just about memorizing; it's about getting comfortable with the exam format, managing your time, and building that crucial exam-day stamina.</p><br />
+          
+          <b>Mastering One Concept at a Time:</b>
+          <p>Sometimes you just need to drill down on a specific topic. That's where our <b>lesson-focused quizzes</b> come in. They let you dive deep into particular lessons, ensuring you grasp every concept before moving on.</p><br />
+          
+          <b>More Than Just Multiple Choice:</b>
+          <p>We know learning isn't one-size-fits-all. That's why Academia supports a <b>vast array of question types</b>. This keeps things engaging and truly tests your understanding, not just your ability to pick A, B, or C.</p><br />
+          <p>Academia is a <b>stateless</b> web app. What does that mean for you? It means it's super fast, super reliable, and designed to just work seamlessly, letting you focus purely on your studies without any hiccups. All the heavy lifting happens right there on your device, making it incredibly efficient.</p><br />
         </p>
       );
     },
