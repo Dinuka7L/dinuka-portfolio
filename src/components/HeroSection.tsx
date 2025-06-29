@@ -22,15 +22,6 @@ const HeroSection: React.FC = () => {
       id="about" 
       className="min-h-screen flex items-center relative pt-20 pb-16 overflow-hidden bg-gradient-to-br from-white to-blue-50 dark:from-gray-900 dark:to-gray-800"
     >
-      {/* Circling Gradient Stroke Background */}
-      <CirclingGradientStroke 
-        size={800}
-        strokeWidth={3}
-        duration={6} // 10 rounds per minute = 6 seconds per round
-        colors={['#3b82f6', '#8b5cf6', '#ef4444', '#10b981']} // Blue, Purple, Red, Green
-        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-30"
-      />
-      
       <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
       
       <div className="container mx-auto px-4 relative z-10">
@@ -108,16 +99,28 @@ const HeroSection: React.FC = () => {
             </div>
           </div>
           
-          <div className="order-1 lg:order-2 flex justify-center lg:justify-end animate-fadeIn" style={{ animationDelay: '0.4s' }}>
-            
-            <MovingBorderImage
-  src={myfromalpicture} alt="https://avatars.githubusercontent.com/u/179111403?v=4"
-  size={320}
-  imageSize={280}
-  borderWidth={1}
-  duration={4000}
-  className="shadow-xl border-4 border-white dark:border-gray-800"
-/>
+          <div className="order-1 lg:order-2 flex justify-center lg:justify-end animate-fadeIn relative" style={{ animationDelay: '0.4s' }}>
+            {/* Circling Gradient Stroke around profile picture */}
+            <div className="relative">
+              <CirclingGradientStroke 
+                size={400}
+                strokeWidth={4}
+                duration={12} // Slower: 5 rounds per minute = 12 seconds per round
+                colors={['#3b82f6', '#8b5cf6', '#ef4444', '#10b981']} // Blue, Purple, Red, Green
+                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                opacity={0.8} // More visible
+              />
+              
+              <MovingBorderImage
+                src={myfromalpicture} 
+                alt="Dinuka Liyanage Profile"
+                size={320}
+                imageSize={280}
+                borderWidth={1}
+                duration={4000}
+                className="shadow-xl border-4 border-white dark:border-gray-800 relative z-10"
+              />
+            </div>
           </div>
         </div>
         
