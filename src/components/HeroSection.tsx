@@ -5,9 +5,9 @@ import resumePDF from '../assets/dinuka_liyanage_resume.pdf';
 import myfromalpicture from '../assets/Photo-Dinuka Liyanage-Formal.jpg';
 import { FlipWords } from "../ui/flip-words";
 import { MovingBorderImage  } from "../ui/moving-border";
+import { CirclingGradientStroke } from "../ui/circling-gradient-stroke";
+
 const flipWords1 = ["Information Security", "Accounting & Finance", "Computer Network & Architecture", "Software Development", "Workflow Automation", " Business Management", "Web Application Development","AI-Agent Development"];
-
-
 
 const HeroSection: React.FC = () => {
   const scrollToSection = (id: string) => {
@@ -22,6 +22,15 @@ const HeroSection: React.FC = () => {
       id="about" 
       className="min-h-screen flex items-center relative pt-20 pb-16 overflow-hidden bg-gradient-to-br from-white to-blue-50 dark:from-gray-900 dark:to-gray-800"
     >
+      {/* Circling Gradient Stroke Background */}
+      <CirclingGradientStroke 
+        size={800}
+        strokeWidth={3}
+        duration={6} // 10 rounds per minute = 6 seconds per round
+        colors={['#3b82f6', '#8b5cf6', '#ef4444', '#10b981']} // Blue, Purple, Red, Green
+        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-30"
+      />
+      
       <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
       
       <div className="container mx-auto px-4 relative z-10">
@@ -45,8 +54,8 @@ const HeroSection: React.FC = () => {
 
             <p className="text-lg mb-8 text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl">
               "Those who settle for the ordinary will never touch the extraordinary."<br/><br/>
-              I'm someone on a mission. Not to be ordinary. Not even to be exceptional. I’m here to do the impossible, the unthinkable, the best of the best in Information Security and Business Management.
-              Armed with a strong academic backbone, real-world experience, and a restless urge to question everything, I’m constantly learning, sharpening, testing, shaping cybersecurity solutions that make the digital world not just safer but better.
+              I'm someone on a mission. Not to be ordinary. Not even to be exceptional. I'm here to do the impossible, the unthinkable, the best of the best in Information Security and Business Management.
+              Armed with a strong academic backbone, real-world experience, and a restless urge to question everything, I'm constantly learning, sharpening, testing, shaping cybersecurity solutions that make the digital world not just safer but better.
             </p>
             
             <div className="flex flex-wrap gap-4">
