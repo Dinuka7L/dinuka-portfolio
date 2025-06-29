@@ -15,7 +15,10 @@ export const CirclingGradientStroke: React.FC<CirclingGradientStrokeProps> = ({
   size = 360, // Reduced from 400 to be closer to profile picture
   strokeWidth = 4,
   duration = 12, // 5 rounds per minute
-  colors = ['#3b82f6', '#8b5cf6', '#ef4444', '#10b981'], // Default: Blue, Purple, Red, Green
+  colors = ['#3b82f6',
+          '#60a5fa', 
+          '#1e40af', 
+          '#cf0606'] , // Default: Colors
   className = "",
   opacity = 0.8,
 }) => {
