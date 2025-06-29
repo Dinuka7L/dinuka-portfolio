@@ -105,7 +105,7 @@ const HeroSection: React.FC = () => {
               <CirclingGradientStroke 
                 size={400}
                 strokeWidth={4}
-                duration={12} // Slower: 5 rounds per minute = 12 seconds per round
+                duration={17} // Slower: 5 rounds per minute = 12 seconds per round
                 colors={['#3b82f6', '#8b5cf6', '#ef4444', '#10b981']} // Blue, Purple, Red, Green
                 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                 opacity={0.8} // More visible
