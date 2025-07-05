@@ -299,7 +299,7 @@ const cards = [
           <b>The Academia Quiz LMS Platform Help Students Face Exam with more confidence and readiness</b><br /><br />
           The <b>Academia</b> is a stateless(all information processed on client-side) LMS web application I built to help my peer fellow students prepare for their 1st Year ITC-Exam in the Management Program at FMSC of USJ<br />
           <br /><b>Stats and Analytics</b>
-          <br />Within the first 3 days of launch the LMS got close to 400 New Unique Users with 20,000  Edge Requests (1st Week of deployment) reported by Vercel and google analytics. The LMS is still in its early stages, but the initial response has been overwhelmingly positive, with users praising its user-friendly interface and effective learning tools.
+          <br />Within the first 3 days of launch the LMS got close to 600 New Users with 23,000  Edge Requests (1st Week of deployment) reported by Vercel and google analytics. The LMS is still in its early stages, but the initial response has been overwhelmingly positive, with users praising its user-friendly interface and effective learning tools.
           <br /><br /><b>Key Capabilities:</b><br />
           <b>Real Exam Feels, Without the Pressure:</b>
           <p>I created an enviorment to simulate<b>exam-based quizzes</b> that mimics the real exam. So it isn't just about memorizing; it's about getting comfortable with the exam format, managing your time, and building that crucial exam-day stamina.</p><br />
