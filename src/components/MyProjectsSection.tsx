@@ -8,6 +8,8 @@ import { Link } from 'react-router-dom';
 import wraith_bg from '../assets/wraith_ghost_gen.png';
 import DogGenAPI from '../assets/DogGenAPI.png';
 import AcademiaSS1 from '../assets/Academia-SS-1.png';
+import DNotesImage1 from "../assets/DNotes-1.png";
+import MERNAuthSS1 from "../assets/MERN-Auth-SS-1.png"
 
 function MyProjectsSection() {
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
@@ -143,7 +145,21 @@ function MyProjectsSection() {
                     >
                       {active.ctaText}
                     </Link>
-                  ) : (
+                  ) : active && typeof active.title === "string" && active.title === "DNotes" ? (
+                    <Link
+                      to="/dnotes"
+                      className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
+                    >
+                      {active.ctaText}
+                    </Link>
+                  ) : active && typeof active.title === "string" && active.title === "MERN-Auth" ? (
+                    <Link
+                      to="/mern-auth"
+                      className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
+                    >
+                      {active.ctaText}
+                    </Link>
+                  ): (
                     <motion.a
                       layout
                       initial={{ opacity: 0 }}
@@ -288,6 +304,46 @@ const cards = [
     },
   },
   {
+    description: "A Web Application Authentication System",
+    title: "MERN-Auth",
+    src: MERNAuthSS1,
+    ctaText: "See Project",
+    ctaLink: "/dinuka-portfolio/mern-auth",
+    content: () => {
+      return ( <p>
+        <b>MERN Authentication System </b><br /><br />
+          The <b>Codesistency</b> project is a full-stack authentication system I built using the <b>MERN stack (MongoDB, Express, React, Node.js)</b>. It focuses on secure user management with modern security practices like <b>Multi-Factor Authentication (MFA)</b>, <b>Email Verification</b>, <b>Password Reset with Strength Meter</b>, and <b>JWT-based authentication</b>, all while delivering a clean, responsive UI built with <b>Tailwind CSS</b>.<br /><br />
+
+          <b>Key Capabilities:</b><br />
+          <b>End-to-End Authentication Flow:</b>
+
+          <p>From <b>user registration</b> to <b>profile management</b>, the system covers all essential authentication steps, ensuring a smooth and secure login experience. Protected routes enforce strong access control at both frontend and backend levels.</p><br />
+
+          <b>Multi-Factor Authentication (MFA):</b>
+
+          <p>Integrated using <b>Speakeasy</b> and <b>QR code generation</b>, MFA provides an additional security layer, demonstrating real-world enterprise-level practices.</p><br />
+
+          <b>Email-Based Security:</b>
+
+          <p>Users verify their accounts and reset passwords through secure, tokenized email links. Email templates are customizable, making the system adaptable for production-ready deployments.</p><br />
+
+          <b>Modern UI/UX with React + Tailwind:</b>
+
+          <p>A fully responsive interface designed with Tailwind CSS and React components, ensuring accessibility and usability across devices. Profile picture upload and interactive password strength indicators improve user experience.</p><br />
+
+          <b>Technical Highlights:</b>
+
+          <p>The backend is structured with <b>modular controllers, routes, middleware, and utilities</b>, enforcing clean architecture and maintainability. Passwords are hashed with <b>bcrypt</b>, and authentication is secured using <b>JWTs</b> with middleware-based validation. On the frontend, <b>Zustand</b> is used for global state management, and Vite ensures a fast development workflow.</p><br />
+
+          <b>Learning Outcomes as a Developer:</b><br />
+
+          <p>Through this project, I deepened my knowledge in:<br /> - Implementing <b>secure authentication workflows</b> with real-world practices like MFA and JWT.<br /> - Applying <b>best practices in backend security</b>, including password hashing, token-based sessions, and middleware authorization.<br /> - Designing <b>scalable project structures</b> for large applications using clear separation of concerns.<br /> - Enhancing frontend development skills with <b>state management, responsive design, and UX best practices</b>.<br /> - Configuring <b>environment variables</b> and deployment setups that mimic production-ready environments.<br /></p><br />
+
+          </p>
+      );
+    },
+  },
+  {
     description: "Stateless Quiz Platform for batchmates",
     title: "Academia",
     src: AcademiaSS1,
@@ -316,6 +372,81 @@ const cards = [
             <br /><br />Finally, I deployed the entire application on Vercel, providing a globally distributed, fast, and scalable hosting environment with zero server management, keeping the app always available and lightning quick for users.</p>
             
           </p>
+      );
+    },
+  },
+  {
+    description: "Full Stack Note-Taking App",
+    title: "DNotes",
+    src: DNotesImage1,
+    ctaText: "See Project",
+    ctaLink: "/dinuka-portfolio/dnotes",
+    content: () => {
+      return (
+        <p>
+          <b>DNotes – Fullstack MERN Notes App with Rate Limiting and Clean UI</b><br /><br />
+          <b>DNotes</b> is a modern, fullstack MERN (MongoDB, Express.js, React, Node.js) web application designed to help users create and manage notes seamlessly. Built using <b>React + Vite</b> for the frontend and <b>Express.js + MongoDB</b> for the backend, the app demonstrates key architectural patterns in fullstack development, including API design, state management, rate-limiting, and production deployment practices.<br /><br />
+
+          <b>Key Features:</b><br />
+          - <b>Note Creation & Management:</b><br />
+          Users can add, view, and delete notes through an intuitive interface. The backend uses MongoDB and Mongoose to store note data in a structured format, supporting rapid data retrieval and scalability.<br /><br />
+
+          - <b>Rate-Limited API with Upstash Redis:</b><br />
+          A custom Express middleware powered by <b>Upstash Redis</b> restricts excessive API usage to ensure backend stability and prevent abuse. Each request is evaluated based on IP using a token bucket algorithm with configurable limits.<br /><br />
+
+          - <b>Clean and Responsive Frontend UI:</b><br />
+          The React-based UI leverages modern component-based architecture with <b>React Router</b> for SPA navigation. Users can switch between pages like "All Notes" and "Create Note" smoothly, with real-time feedback on actions.<br /><br />
+
+          - <b>Axios Integration:</b><br />
+          Frontend API interactions are powered by a reusable <code>axios.js</code> wrapper to handle requests and errors uniformly. This centralization improves maintainability and simplifies debugging.<br /><br />
+
+          - <b>Environment-Aware Deployment:</b><br />
+          In <code>development</code> mode, the backend and frontend run independently for faster iteration. In <code>production</code>, the backend serves the built frontend from <code>front-end/dist</code>, enabling single-host deployment using platforms like Vercel or Render.<br /><br />
+
+          - <b>Navigation via React Router:</b><br />
+          The app uses <code>&lt;Routes&gt;</code> and <code>&lt;Link&gt;</code> components to handle routing between views. Dynamic and static paths are supported to allow a flexible navigation structure.<br /><br />
+
+          - <b>Custom Logging & Middleware:</b><br />
+          Requests are logged with method and path for debugging. Express middlewares are layered for parsing JSON, handling CORS (in dev), and enforcing rate limits.<br /><br />
+
+          <b>Project Structure:</b><br />
+          - <b>Back-End:</b> Organized into <code>controllers</code>, <code>routes</code>, <code>models</code>, and <code>middleware</code> folders. MongoDB is connected via Mongoose using environment variables stored in <code>.env</code>.<br />
+          - <b>Front-End:</b> Built with Vite and React, includes <code>components</code> for UI, <code>lib</code> for utilities like Axios config, and <code>pages</code> for views. Styles are defined in <code>index.css</code> for global control.<br /><br />
+
+          <b>How It Showcases MERN Stack Mastery:</b><br />
+          - Demonstrates complete backend setup including database, routes, middleware, and controllers.<br />
+          - Shows understanding of async handling, CORS, and environment configuration.<br />
+          - Implements frontend API interaction with modular Axios and router-based navigation.<br />
+          - Includes practical rate-limiting using Redis and production-grade serving logic.<br /><br />
+
+          <b>Directory Overview:</b><br />
+          <code>
+            DNotes<br />
+            ├── back-end<br />
+            │   ├── src<br />
+            │   │   ├── config → MongoDB and Upstash setup<br />
+            │   │   ├── controllers → Logic for notes API<br />
+            │   │   ├── middleware → Rate limiter with Upstash Redis<br />
+            │   │   ├── models → Mongoose schema for notes<br />
+            │   │   └── routes → Express routes for notes<br />
+            ├── front-end<br />
+            │   ├── src<br />
+            │   │   ├── components → UI components (e.g., navbar)<br />
+            │   │   ├── lib → Axios and utility functions<br />
+            │   │   └── pages → Route views like NoteList, CreateNote<br />
+            │   ├── App.jsx → Route layout<br />
+            │   ├── main.jsx → React entry<br />
+            │   └── index.css → Global styles<br />
+          </code><br /><br />
+
+          <b>Technologies Used:</b><br />
+          - Frontend: React, Vite, Axios, React Router<br />
+          - Backend: Express.js, MongoDB, Mongoose, dotenv<br />
+          - Middleware: Custom rate limiter using Upstash Redis<br />
+          - Hosting: Compatible with Vercel, Render, or Railway<br /><br />
+
+        </p>
+
       );
     },
   },

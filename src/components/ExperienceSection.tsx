@@ -16,13 +16,13 @@ const experienceData: Experience[] = [
     title: 'Junior Cybersecurity Analyst',
     company: 'CryptoGen',
     location: 'Colombo, Sri Lanka',
-    period: 'May 2025 - June 2025 (Internship)',
+    period: 'May 2025 - June 2025 (2 Months) (Internship)',
     description: [
       'Actively Hunt for Security Threats and Vulnerabilities using Security Tools and Threat Intelligence Platforms.',
       'Incident Response and Analysis of Security Breaches.',
       'Expertise with SOC Tools - SIEM, XDR, and EDR and SOAR.',
       'SOC Operations - Incident Detection and Escalation.',
-      'Left due to academic pressure and I didn\'t like SOC work. Too much repetitive, I prefer more dynamic and challenging roles.',
+      'Left due to academic priorities and I didn\'t like SOC work. Too much repetitive, I prefer more dynamic and challenging roles.',
     ],
     technologies: ['SIEM', 'EDR', 'XDR', 'FortiSIEM', 'LogRythm', 'Security Operations Center (SOC)', 'Stellar XDR', 'Microsoft Sentinel', 'Threat Intelligence'],
     companyWebsite: 'https://www.crypto-gen.com/'

@@ -11,7 +11,9 @@ import ContactSection from './components/ContactSection';
 import Certifications from './components/ProfessionalQualificationsSection';
 import Footer from './components/Footer';
 import SentraFusionPage from './pages/sentrafusion';
-import KeyloggerProjectShowcase from './pages/project-wraith'; 
+import KeyloggerProjectShowcase from './pages/project-wraith';
+import DNotes from './pages/dNotes'; 
+import MERNAuth from './pages/mern-auth';
 
 function App() {
   useEffect(() => {
@@ -22,6 +24,7 @@ function App() {
     <Router> {/* Removed basename */}
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
         <Header />
+       
         <Routes>
           <Route
             path="/"
@@ -41,6 +44,8 @@ function App() {
           />
           <Route path="/sentrafusion" element={<SentraFusionPage />} />
           <Route path="/project-wraith" element={<KeyloggerProjectShowcase />} />
+          <Route path="/DNotes" element={<DNotes />} />
+          <Route path="/MERN-Auth" element={<MERNAuth />} />
         </Routes>
       </div>
     </Router>
