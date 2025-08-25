@@ -312,7 +312,7 @@ const cards = [
     content: () => {
       return ( <p>
         <b>MERN Authentication System </b><br /><br />
-          The <b>Codesistency</b> project is a full-stack authentication system I built using the <b>MERN stack (MongoDB, Express, React, Node.js)</b>. It focuses on secure user management with modern security practices like <b>Multi-Factor Authentication (MFA)</b>, <b>Email Verification</b>, <b>Password Reset with Strength Meter</b>, and <b>JWT-based authentication</b>, all while delivering a clean, responsive UI built with <b>Tailwind CSS</b>.<br /><br />
+          The <b>D Auth</b> project is a full-stack authentication system I built using the <b>MERN stack (MongoDB, Express, React, Node.js)</b>. It focuses on secure user management with modern security practices like <b>Multi-Factor Authentication (MFA)</b>, <b>Email Verification</b>, <b>Password Reset with Strength Meter</b>, and <b>JWT-based authentication</b>, all while delivering a clean, responsive UI built with <b>Tailwind CSS</b>.<br /><br />
 
           <b>Key Capabilities:</b><br />
           <b>End-to-End Authentication Flow:</b>
