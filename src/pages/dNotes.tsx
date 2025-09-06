@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import mongoLogo from "../assets/mongoDB-logo.png";
-import expressLogo from "../assets/ExpressJS-Logo.png";
-import reactLogo from "../assets/react-logo.svg";
-import nodeLogo from "../assets/NodeJS-Logo.png";
+import mongoLogo from "../assets/skill-logos/mongoDB-logo.png";
+import expressLogo from "../assets/skill-logos/ExpressJS-Logo.png";
+import reactLogo from "../assets/skill-logos/React-icon.svg.png";
+import nodeLogo from "../assets/skill-logos/NodeJS-Logo.png";
 import ss1 from "../assets/DNotes-1.png";
 import ss2 from "../assets/DNotes-2.png";
 import ss3 from "../assets/DNotes-MDB.png";

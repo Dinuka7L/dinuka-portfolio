@@ -47,8 +47,46 @@ const AchievementsSection: React.FC = () => {
 
   return (
     <section id="achievements" className="py-20 bg-white dark:bg-gray-900 relative overflow-visible">
-      {/* Header */}
+      {/* Background grid */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: `
+            repeating-linear-gradient(
+              0deg, 
+              rgba(255,255,255,0.05) 0 2px, 
+              transparent 2px 40px
+            ),
+            repeating-linear-gradient(
+              90deg, 
+              rgba(200,200,255,0.05) 0 2px, 
+              transparent 2px 40px
+            )
+          `,
+          maskImage: "radial-gradient(circle at center, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%)",
+          WebkitMaskImage: "radial-gradient(circle at center, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%)",
+          maskRepeat: "no-repeat",
+          maskPosition: "center",
+          maskSize: "cover",
+          zIndex: 0,
+          boxShadow: "inset 0 0 200px rgba(0,0,0,0.3)",
+        }}
+      />
+
+      {/* Floating blobs */}
+      <motion.div
+        className="absolute top-32 left-10 w-64 h-64 rounded-full bg-cyan-400/30 blur-3xl"
+        animate={{ y: [0, 30, 0] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div
+        className="absolute bottom-20 right-10 w-72 h-72 rounded-full bg-yellow-400/20 blur-3xl"
+        animate={{ y: [0, -40, 0] }}
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+      />
+
       <div className="container mx-auto px-4 relative z-10">
+        {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
             <SplitText
@@ -65,12 +103,14 @@ const AchievementsSection: React.FC = () => {
           </h2>
           <div className="w-20 h-1 bg-cyan-600 mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-prose mx-auto px-4">
-            A showcase of milestones I’ve been proud to achieve.
+            A showcase of milestones I’ve been proud to achieve. From intense competitions
+            and hackathons to academic recognition. Each of these pushed me to grow and
+            prove my skills in real-world challenges.
           </p>
         </div>
 
         {/* Achievements Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 relative z-10">
           {achievementsData.map((item, index) => (
             <motion.div
               key={index}
@@ -84,7 +124,7 @@ const AchievementsSection: React.FC = () => {
                 backgroundImage: `linear-gradient(155deg, ${(item.gradientColors ?? ["#2563eb", "#1e3a8a"]).join(", ")})`,
               }}
             >
-              <div className="bg-white/50 dark:bg-gray-800/50 backdrop-blur-xl rounded-xl p-6 h-full w-full transition-transform duration-300 ease-out">
+              <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-xl p-6 h-full w-full transition-transform duration-300 ease-out">
                 <div className="flex items-center mb-3">
                   {item.logo ? (
                     <img src={item.logo} alt={`${item.issuer} logo`} className="w-12 h-12 mr-3 object-contain" />
@@ -147,7 +187,7 @@ const AchievementsSection: React.FC = () => {
               src={activeCert}
               alt="Certificate"
               className="max-h-[80vh] w-auto object-contain rounded-lg shadow-xl cursor-pointer"
-              onClick={(e) => e.stopPropagation()} // Prevent modal close when clicking the image
+              onClick={(e) => e.stopPropagation()}
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.8 }}

@@ -1,42 +1,61 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import frontendLogo from '../assets/NodeJS-Logo.png';
+import nodejslogo from '../assets/skill-logos/NodeJS-Logo.png';
+import autopsylogo from '../assets/skill-logos/autopsy-logo.png';
+import reactlogo from '../assets/skill-logos/React-icon.svg.png';
+import rora from '../assets/skill-logos/Ruby_On_Rails_Logo.svg.png';
+import gitlogo from '../assets/skill-logos/Git-Icon-1788C.png';
+import burplogo from '../assets/skill-logos/burpsuite-logo.svg';
+import javasriptlogo from '../assets/skill-logos/js-logo.png';
+import pythonlogo from '../assets/skill-logos/python-logo.png';
+import sqllogo from '../assets/skill-logos/Sql_data_base_with_logo.png';
+import nmaplogo from '../assets/skill-logos/logo-nmap.png';
+import pfsenselogo from '../assets/skill-logos/pfsense-logo.png';
+import mongodblogo from '../assets/skill-logos/mongoDB-logo.png';
+
 
 const sectors = [
   {
     name: 'Front-end Development',
     technologies: [
-      { logo: frontendLogo, description: 'React.js, HTML/CSS, TailwindCSS – used in Portfolio project' },
-      { logo: frontendLogo, description: 'Vue.js – SPA project for school portal' },
-      { logo: frontendLogo, description: 'JavaScript/TypeScript – interactive dashboards' },
+      { logo: reactlogo, description: 'React.js, HTML/CSS, TailwindCSS – used in Portfolio project' },
+      { logo: rora, description: 'Ruby on Rails – SPA project for school portal' },
+      { logo: javasriptlogo, description: 'JavaScript/TypeScript – interactive dashboards' },
     ],
   },
   {
     name: 'Back-end Development',
     technologies: [
-      { logo: frontendLogo, description: 'Node.js, Express – REST APIs for Portfolio' },
-      { logo: frontendLogo, description: 'Python – automation scripts and CTF tools' },
-      { logo: frontendLogo, description: 'SQL/PostgreSQL – database management' },
+      { logo: nodejslogo, description: 'Node.js, Express – REST APIs for Portfolio' },
+      { logo: pythonlogo, description: 'Python – automation scripts and CTF tools' },
+      { logo: rora, description: 'Ruby on Rails – SPA project for school portal' },
+      { logo: sqllogo, description: 'SQL/PostgreSQL – database management' },
+      { logo: mongodblogo, description: 'MongoDB – NoSQL database management' },
     ],
   },
   {
     name: 'Web App Security',
     technologies: [
-      { logo: frontendLogo, description: 'Burp Suite – penetration testing in CTFs' },
-      { logo: frontendLogo, description: 'OWASP top 10 testing – school projects' },
+      { logo: burplogo, description: 'Burp Suite – penetration testing in CTFs' },
     ],
   },
   {
     name: 'Network Security',
     technologies: [
-      { logo: frontendLogo, description: 'Nmap, Netmiko – network scanning & automation' },
-      { logo: frontendLogo, description: 'Firewalls – PfSense lab setup' },
+      { logo: nmaplogo, description: 'Nmap, Netmiko – network scanning & automation' },
+      { logo: pfsenselogo, description: 'Firewalls – PfSense lab setup' },
     ],
   },
   {
     name: 'Forensics',
     technologies: [
-      { logo: frontendLogo, description: 'Autopsy – disk & memory analysis for CTFs' },
+      { logo: autopsylogo, description: 'Autopsy – disk & memory analysis for CTFs' },
+    ],
+  },
+  {
+    name: 'Other Tools',
+    technologies: [
+      { logo: gitlogo, description: 'Git – version control for all projects' },
     ],
   },
 ];
@@ -85,7 +104,7 @@ const SkillsSection: React.FC = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
-            Sectors & Expertise
+            Technical Skills & Expertise
           </h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">

@@ -58,8 +58,11 @@ const HeroSection: React.FC = () => {
               </span>
             </h1>
 
-            <h2 className="text-xl md:text-2xl font-medium mb-6 text-gray-700 dark:text-gray-100">
-              I specialize in <FlipWords words={flipWords1} />
+           <h2 className="text-xl md:text-2xl font-medium mb-6 text-gray-700 dark:text-gray-100">
+              I specialize in{" "}
+              <span className="inline-block min-h-[3rem] md:min-h-[3.5rem] lg:min-h-[4rem]">
+                <FlipWords words={flipWords1} />
+              </span>
             </h2>
 
             <p className="text-lg mb-8 text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl">
