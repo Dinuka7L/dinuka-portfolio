@@ -1,144 +1,124 @@
-import React, { useEffect, useRef, useState } from 'react';
-import {
-  Code,
-  Server,
-  Network,
-  Database,
-  Globe,
-  Lightbulb
-} from 'lucide-react';
+import React from 'react';
+import { motion } from 'framer-motion';
+import frontendLogo from '../assets/NodeJS-Logo.png';
 
-const skillsData = [
+const sectors = [
   {
-    name: 'Frontend Development',
-    icon: <Code size={24} />,
-    skills: [
-      { name: 'HTML5/CSS3', level: 9 },
-      { name: 'JavaScript', level: 9 },
-      { name: 'React.js', level: 8 },
-      { name: 'TypeScript', level: 7 },
-      { name: 'Vue.js', level: 6 }
-    ]
+    name: 'Front-end Development',
+    technologies: [
+      { logo: frontendLogo, description: 'React.js, HTML/CSS, TailwindCSS – used in Portfolio project' },
+      { logo: frontendLogo, description: 'Vue.js – SPA project for school portal' },
+      { logo: frontendLogo, description: 'JavaScript/TypeScript – interactive dashboards' },
+    ],
   },
   {
-    name: 'Software Development',
-    icon: <Server size={24} />,
-    skills: [
-      { name: 'Python', level: 8 },
-      { name: 'Node.js', level: 7 },
-      { name: 'Bash', level: 6 },
-      { name: 'Ruby (Rails)', level: 5 },
-      { name: 'R', level: 4 }
-    ]
+    name: 'Back-end Development',
+    technologies: [
+      { logo: frontendLogo, description: 'Node.js, Express – REST APIs for Portfolio' },
+      { logo: frontendLogo, description: 'Python – automation scripts and CTF tools' },
+      { logo: frontendLogo, description: 'SQL/PostgreSQL – database management' },
+    ],
+  },
+  {
+    name: 'Web App Security',
+    technologies: [
+      { logo: frontendLogo, description: 'Burp Suite – penetration testing in CTFs' },
+      { logo: frontendLogo, description: 'OWASP top 10 testing – school projects' },
+    ],
   },
   {
     name: 'Network Security',
-    icon: <Network size={24} />,
-    skills: [
-      { name: 'IDS', level: 7 },
-      { name: 'Routing, Switching & Network Device Configuration', level: 8 },
-      { name: 'Network Design and Architecture', level: 9 },
-      { name: 'Firewalls (PfSense)', level: 6 },
-      { name: 'SIEM (Splunk, FortiSIEM)', level: 5 }
-    ]
+    technologies: [
+      { logo: frontendLogo, description: 'Nmap, Netmiko – network scanning & automation' },
+      { logo: frontendLogo, description: 'Firewalls – PfSense lab setup' },
+    ],
   },
   {
-    name: 'Database',
-    icon: <Database size={24} />,
-    skills: [
-      { name: 'MongoDB', level: 8 },
-      { name: 'PostgreSQL', level: 7 },
-      { name: 'MySQL', level: 8 },
-      { name: 'Redis', level: 6 },
-      { name: 'SQLite', level: 7 }
-    ]
+    name: 'Forensics',
+    technologies: [
+      { logo: frontendLogo, description: 'Autopsy – disk & memory analysis for CTFs' },
+    ],
   },
-  {
-    name: 'DevOps',
-    icon: <Globe size={24} />,
-    skills: [
-      { name: 'Docker', level: 7 },
-      { name: 'AWS', level: 6 },
-      { name: 'CI/CD', level: 7 },
-      { name: 'Kubernetes', level: 5 },
-      { name: 'Linux', level: 8 }
-    ]
-  },
-  {
-    name: 'Other Skills',
-    icon: <Lightbulb size={24} />,
-    skills: [
-      { name: 'Git', level: 9 },
-      { name: 'Agile/Scrum', level: 8 },
-      { name: 'RESTful APIs', level: 9 },
-      { name: 'GraphQL', level: 7 },
-      { name: 'Problem Solving', level: 9 }
-    ]
-  }
 ];
 
-const SkillsSection = () => {
-  const sectionRef = useRef(null);
-  const [inView, setInView] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => setInView(entry.isIntersecting),
-      { threshold: 0.3 }
-    );
-    if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => observer.disconnect();
-  }, []);
-
+const SkillsSection: React.FC = () => {
   return (
-    <section
-      ref={sectionRef}
-      id="skills"
-      className="py-20 bg-white dark:bg-gray-900"
-    >
-      <div className="container mx-auto px-4">
+    <section id="skills" className="relative py-20 bg-white dark:bg-gray-900 overflow-hidden">
+      {/* Background grid */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: `
+            repeating-linear-gradient(
+              0deg, 
+              rgba(255,255,255,0.05) 0 2px, 
+              transparent 2px 40px
+            ),
+            repeating-linear-gradient(
+              90deg, 
+              rgba(200,200,255,0.05) 0 2px, 
+              transparent 2px 40px
+            )
+          `,
+          maskImage: "radial-gradient(circle at center, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%)",
+          WebkitMaskImage: "radial-gradient(circle at center, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%)",
+          maskRepeat: "no-repeat",
+          maskPosition: "center",
+          maskSize: "cover",
+          zIndex: 0,
+          boxShadow: "inset 0 0 200px rgba(0,0,0,0.3)",
+        }}
+      />
+
+      {/* Floating blobs */}
+      <motion.div
+        className="absolute top-32 left-10 w-64 h-64 rounded-full bg-cyan-400/30 blur-3xl"
+        animate={{ y: [0, 30, 0] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div
+        className="absolute top-80 right-40 w-72 h-72 rounded-full bg-purple-400/20 blur-3xl"
+        animate={{ y: [0, -40, 0] }}
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+      />
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
-            Skills & Expertise
+            Sectors & Expertise
           </h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            A comprehensive overview of my technical skills and areas of expertise across various domains.
+            This section is under development! These are the main areas I work on, with tools & technologies I use for each sector.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {skillsData.map((category, index) => (
-            <div
-              key={index}
-              className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 shadow-md transition-transform duration-300 hover:shadow-lg hover:-translate-y-1"
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {sectors.map((sector, i) => (
+            <motion.div
+              key={i}
+              className="relative flex flex-col items-center p-6 rounded-xl shadow-lg bg-white/20 dark:bg-gray-800/30 backdrop-blur-xl border border-white/20 dark:border-gray-700/30"
+              whileHover={{ scale: 1.03 }}
             >
-              <div className="flex items-center mb-6">
-                <div className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 mr-3">
-                  {category.icon}
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white">{category.name}</h3>
-              </div>
-
-              <div className="space-y-4">
-                {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex}>
-                    <div className="flex justify-between mb-1">
-                      <span className="text-gray-700 dark:text-gray-300">{skill.name}</span>
-                      <span className="text-gray-500 dark:text-gray-400 text-sm">{skill.level * 10}%</span>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">{sector.name}</h3>
+              <div className="flex flex-wrap justify-center gap-6">
+                {sector.technologies.map((tech, j) => (
+                  <motion.div
+                    key={j}
+                    className="relative group"
+                  >
+                    <img
+                      src={tech.logo}
+                      alt={sector.name}
+                      className="w-16 h-16 object-contain cursor-pointer"
+                    />
+                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 translate-y-2 bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-lg p-2 text-sm shadow-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-[-110%] transition-all duration-300 text-center w-44 pointer-events-auto">
+                      {tech.description}
                     </div>
-                    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                      <div
-                        className="bg-blue-600 dark:bg-blue-500 h-2.5 rounded-full transition-all duration-1000 ease-out"
-                        style={{
-                          width: inView ? `${skill.level * 10}%` : '0%'
-                        }}
-                      ></div>
-                    </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
