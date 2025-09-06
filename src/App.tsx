@@ -9,6 +9,7 @@ import MyProjectsSection from './components/MyProjectsSection';
 import ProjectsSection from './components/ProjectsSection';
 import ContactSection from './components/ContactSection';
 import Certifications from './components/ProfessionalQualificationsSection';
+import AchievementsSection from './components/AchievementsSection';
 import Footer from './components/Footer';
 import SentraFusionPage from './pages/sentrafusion';
 import KeyloggerProjectShowcase from './pages/project-wraith';
@@ -32,6 +33,7 @@ function App() {
               <>
                 <HeroSection />
                 <QualificationsSection />
+                <AchievementsSection/>
                 <ExperienceSection />
                 <SkillsSection />
                 <Certifications />
