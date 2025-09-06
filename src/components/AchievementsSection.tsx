@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Trophy, Calendar, MapPin } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import SplitText from "../ui/split-text";
 import ctf2025 from "../assets/Sliit-codefest-ctf-2025.png";
+import certSample from "../assets/DL-SLIIT-Codefest-CTF-RunnerUp-Cert.jpg";
 
-// --- Data Types ---
 type Achievement = {
   title: string;
   issuer: string;
@@ -14,9 +14,9 @@ type Achievement = {
   description: string;
   logo?: string;
   gradientColors?: string[];
+  cert?: string;
 };
 
-// --- Achievements Data ---
 const achievementsData: Achievement[] = [
   {
     title: "1st Runners-up CodeFest CTF 2025",
@@ -28,6 +28,7 @@ const achievementsData: Achievement[] = [
       "Competed against 48 university teams nationwide in a 7-hour intense cybersecurity challenge and secured 2nd place. Challenges designed by KPMG Sri Lanka. Contributed 340 points to the team's total of 620 points.",
     logo: ctf2025,
     gradientColors: ["#eb5802", "#042485", "#8000ff"],
+    cert: certSample
   },
   {
     title: "Island 7th, Galle District 1st - A/L Commerce",
@@ -39,55 +40,16 @@ const achievementsData: Achievement[] = [
     logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3XZ90ziCThbeUT99sTHp_aamMBPSSncEmcg&s",
     gradientColors: ["#ab0014", "#010966", "#0080ab"],
   },
-  
 ];
 
-// --- Component ---
 const AchievementsSection: React.FC = () => {
+  const [activeCert, setActiveCert] = useState<string | null>(null);
+
   return (
-    <section id="achievements" className="py-20 bg-white dark:bg-gray-900 relative overflow-hidden">
-        {/* Background grid */}
-    <div
-  className="absolute inset-0 pointer-events-none"
-  style={{
-    backgroundImage: `
-      repeating-linear-gradient(
-        0deg, 
-        rgba(255,255,255,0.05) 0 2px, 
-        transparent 2px 40px
-      ),
-      repeating-linear-gradient(
-        90deg, 
-        rgba(200,200,255,0.05) 0 2px, 
-        transparent 2px 40px
-      )
-    `,
-    maskImage: "radial-gradient(circle at center, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%)",
-    WebkitMaskImage: "radial-gradient(circle at center, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%)",
-    maskRepeat: "no-repeat",
-    maskPosition: "center",
-    maskSize: "cover",
-    zIndex: 0,
-    // subtle 3D effect: darker edges for sinkhole look
-    boxShadow: "inset 0 0 200px rgba(0,0,0,0.3)",
-  }}
-/>
-
-      {/* Floating blobs for aesthetics */}
-      <motion.div
-        className="absolute top-32 left-10 w-64 h-64 rounded-full bg-cyan-400/30 blur-3xl"
-        animate={{ y: [0, 30, 0] }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="absolute bottom-20 right-10 w-72 h-72 rounded-full bg-yellow-400/20 blur-3xl"
-        animate={{ y: [0, -40, 0] }}
-        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-      />
-
-      <div className="container mx-auto px-4">
-        {/* Header */}
-        <div className="text-center mb-16 relative z-10">
+    <section id="achievements" className="py-20 bg-white dark:bg-gray-900 relative overflow-visible">
+      {/* Header */}
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
             <SplitText
               text="My Achievements"
@@ -103,14 +65,12 @@ const AchievementsSection: React.FC = () => {
           </h2>
           <div className="w-20 h-1 bg-cyan-600 mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-prose mx-auto px-4">
-            A showcase of milestones I’ve been proud to achieve. From intense competitions
-            and hackathons to academic recognition. Each of these pushed me to grow and
-            prove my skills in real-world challenges.
+            A showcase of milestones I’ve been proud to achieve.
           </p>
         </div>
 
-        {/* Grid Layout */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 relative z-10">
+        {/* Achievements Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
           {achievementsData.map((item, index) => (
             <motion.div
               key={index}
@@ -124,7 +84,7 @@ const AchievementsSection: React.FC = () => {
                 backgroundImage: `linear-gradient(155deg, ${(item.gradientColors ?? ["#2563eb", "#1e3a8a"]).join(", ")})`,
               }}
             >
-              <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-xl p-6 h-full w-full transition-transform duration-300 ease-out">
+              <div className="bg-white/50 dark:bg-gray-800/50 backdrop-blur-xl rounded-xl p-6 h-full w-full transition-transform duration-300 ease-out">
                 <div className="flex items-center mb-3">
                   {item.logo ? (
                     <img src={item.logo} alt={`${item.issuer} logo`} className="w-12 h-12 mr-3 object-contain" />
@@ -139,9 +99,7 @@ const AchievementsSection: React.FC = () => {
                     <a href={item.issuerUrl} target="_blank" rel="noopener noreferrer" className="hover:underline">
                       {item.issuer}
                     </a>
-                  ) : (
-                    item.issuer
-                  )}
+                  ) : item.issuer}
                 </h4>
 
                 {item.location && (
@@ -156,13 +114,47 @@ const AchievementsSection: React.FC = () => {
                   <span>{item.year}</span>
                 </div>
 
-                <p className="text-gray-600 dark:text-gray-400">{item.description}</p>
+                <p className="text-gray-600 dark:text-gray-400 mb-2">{item.description}</p>
+
+                {/* Certificate Button */}
+                {item.cert && (
+                  <div className="mt-2">
+                    <button
+                      onClick={() => setActiveCert(item.cert || null)}
+                      className="text-sm px-3 py-1 bg-blue-600 text-white rounded-full hover:bg-blue-500 transition-colors"
+                    >
+                      See Cert
+                    </button>
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}
         </div>
       </div>
-      
+
+      {/* Certificate Modal */}
+      <AnimatePresence>
+        {activeCert && (
+          <motion.div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4"
+            onClick={() => setActiveCert(null)}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <motion.img
+              src={activeCert}
+              alt="Certificate"
+              className="max-h-[80vh] w-auto object-contain rounded-lg shadow-xl cursor-pointer"
+              onClick={(e) => e.stopPropagation()} // Prevent modal close when clicking the image
+              initial={{ scale: 0.8 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.8 }}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };
