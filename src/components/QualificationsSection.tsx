@@ -61,6 +61,33 @@ const QualificationsSection: React.FC = () => {
 
   return (
     <section id="qualifications" className="py-20 bg-white dark:bg-gray-900 relative overflow-hidden">
+      {/* Background grid */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: `
+            repeating-linear-gradient(
+              0deg, 
+              rgba(255,255,255,0.05) 0 2px, 
+              transparent 2px 40px
+            ),
+            repeating-linear-gradient(
+              90deg, 
+              rgba(200,200,255,0.05) 0 2px, 
+              transparent 2px 40px
+            )
+          `,
+          maskImage: "radial-gradient(circle at center, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%)",
+          WebkitMaskImage: "radial-gradient(circle at center, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%)",
+          maskRepeat: "no-repeat",
+          maskPosition: "center",
+          maskSize: "cover",
+          zIndex: 0,
+          // subtle 3D effect: darker edges for sinkhole look
+          boxShadow: "inset 0 0 200px rgba(0,0,0,0.3)",
+        }}
+      />
+
       {/* floating blurred blobs */}
       <motion.div
         className="absolute top-20 left-10 w-64 h-64 rounded-full bg-blue-400/30 blur-3xl"

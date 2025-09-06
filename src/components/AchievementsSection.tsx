@@ -32,12 +32,12 @@ const achievementsData: Achievement[] = [
   {
     title: "Island 7th, Galle District 1st - A/L Commerce",
     issuer: "Richmond College",
-    issuerUrl: "https://www.ecu.edu.au/",
+    issuerUrl: "http://www.richmondcollege.lk/",
     year: "2023",
     description:
-      "Achieved good position in the G.C.E. Advanced Level Examination in Commerce stream, excelling in Accounting, Economics, and IT among 50,000+ candidates reaching top 0.01%.",
+      "Achieved a notable place in the G.C.E. Advanced Level Examination in Commerce stream, excelling in Accounting, Economics, and IT among 50,000+ candidates reaching top 0.01%.",
     logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3XZ90ziCThbeUT99sTHp_aamMBPSSncEmcg&s",
-    gradientColors: ["#00ffc9", "#2563eb", "#1e3a8a"],
+    gradientColors: ["#ab0014", "#010966", "#0080ab"],
   },
   
 ];
@@ -46,6 +46,33 @@ const achievementsData: Achievement[] = [
 const AchievementsSection: React.FC = () => {
   return (
     <section id="achievements" className="py-20 bg-white dark:bg-gray-900 relative overflow-hidden">
+        {/* Background grid */}
+    <div
+  className="absolute inset-0 pointer-events-none"
+  style={{
+    backgroundImage: `
+      repeating-linear-gradient(
+        0deg, 
+        rgba(255,255,255,0.05) 0 2px, 
+        transparent 2px 40px
+      ),
+      repeating-linear-gradient(
+        90deg, 
+        rgba(200,200,255,0.05) 0 2px, 
+        transparent 2px 40px
+      )
+    `,
+    maskImage: "radial-gradient(circle at center, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%)",
+    WebkitMaskImage: "radial-gradient(circle at center, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%)",
+    maskRepeat: "no-repeat",
+    maskPosition: "center",
+    maskSize: "cover",
+    zIndex: 0,
+    // subtle 3D effect: darker edges for sinkhole look
+    boxShadow: "inset 0 0 200px rgba(0,0,0,0.3)",
+  }}
+/>
+
       {/* Floating blobs for aesthetics */}
       <motion.div
         className="absolute top-32 left-10 w-64 h-64 rounded-full bg-cyan-400/30 blur-3xl"
@@ -135,6 +162,7 @@ const AchievementsSection: React.FC = () => {
           ))}
         </div>
       </div>
+      
     </section>
   );
 };

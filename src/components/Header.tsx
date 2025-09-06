@@ -1,28 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Moon, Sun } from 'lucide-react';
 
-
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(() => {
-  return document.documentElement.classList.contains('dark');
-  });
+  const [isDarkMode, setIsDarkMode] = useState(() =>
+    document.documentElement.classList.contains('dark')
+  );
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 10);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
+    if (isDarkMode) document.documentElement.classList.add('dark');
+    else document.documentElement.classList.remove('dark');
   }, [isDarkMode]);
 
   const toggleMenu = () => {
@@ -46,6 +41,18 @@ const Header: React.FC = () => {
     }
   };
 
+  const navItems = [
+    ['about', 'About'],
+    ['qualifications', 'Education'],
+    ['achievements', 'Achievements'],
+    ['experience', 'Experience'],
+    ['skills', 'Skills'],
+    ['Certifications', 'Certifications'],
+    ['PersonalProjects', 'Personal Projects'],
+    ['projects', 'Uni Projects'],
+    ['contact', 'Contact'],
+  ];
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -53,6 +60,8 @@ const Header: React.FC = () => {
           ? 'bg-white/60 dark:bg-gray-900/60 backdrop-blur-sm shadow-md py-3'
           : 'bg-transparent py-5'
       }`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <a
@@ -63,18 +72,13 @@ const Header: React.FC = () => {
         </a>
 
         {/* Desktop nav */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div
+          className={`hidden md:flex items-center space-x-8 transition-all duration-300 ${
+            isScrolled && !isHovered ? 'translate-x-32 opacity-0 pointer-events-none' : 'translate-x-0 opacity-100 pointer-events-auto'
+          }`}
+        >
           <nav className="flex items-center space-x-6">
-            {[
-              ['about', 'About'],
-              ['qualifications', 'Education'],
-              ['experience', 'Experience'],
-              ['skills', 'Skills'],
-              ['Certifications', 'Certifications'],
-              ['PersonalProjects', 'Personal Projects'],
-              ['projects', 'Uni Projects'],
-              ['contact', 'Contact'],
-            ].map(([id, label]) => (
+            {navItems.map(([id, label]) => (
               <button
                 key={id}
                 onClick={() => scrollToSection(id)}
@@ -131,16 +135,7 @@ const Header: React.FC = () => {
         }`}
       >
         <div className="flex flex-col items-center pt-24 pb-12 space-y-8 text-xl">
-          {[
-            ['about', 'About'],
-            ['qualifications', 'Education'],
-            ['experience', 'Experience'],
-            ['skills', 'Skills'],
-            ['Certifications', 'Certifications'],
-            ['PersonalProjects', 'Personal Projects'],
-            ['projects', 'Uni Projects'],
-            ['contact', 'Contact'],
-          ].map(([id, label]) => (
+          {navItems.map(([id, label]) => (
             <button
               key={id}
               onClick={() => scrollToSection(id)}
