@@ -59,7 +59,7 @@ const HeroSection: React.FC = () => {
             </h1>
 
            <h2 className="text-xl md:text-2xl font-medium mb-6 text-gray-700 dark:text-gray-100">
-              I specialize in{" "}
+              I specialize in{""}
               <span className="inline-block min-h-[3rem] md:min-h-[3.5rem] lg:min-h-[4rem]">
                 <FlipWords words={flipWords1} />
               </span>
@@ -67,10 +67,10 @@ const HeroSection: React.FC = () => {
 
             <p className="text-lg mb-8 text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl">
               Built to do the impossible, the unthinkable and make impact
-              through solving problems using IT <br />
+              through solving problems using technology. <br />
               <br />
-              I solve problems that I face, on the go and share it with the
-              world. My passion lies in creating solutions and leading projects.
+              I like to solve problems that I face on the go and 
+              leave it a bit better than I found it. My passion lies in creating solutions and leading projects.
               My core values are helping those who need it and learn from what I
               need improving. Armed with a strong academic backbone, real-world
               experience, and a restless urge to question everything, I'm

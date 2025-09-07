@@ -112,13 +112,7 @@ const AchievementsSection: React.FC = () => {
         {/* Achievements Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 relative z-10">
           {achievementsData.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 40, scale: 0.95 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ duration: 0.2, delay: index * 0.2, ease: "easeOut" }}
-              viewport={{ once: true, amount: 0.3 }}
-              whileHover={{ scale: 1.08 }}
+            <div
               className="rounded-xl p-[2px] bg-gradient-to-r shadow-xl"
               style={{
                 backgroundImage: `linear-gradient(155deg, ${(item.gradientColors ?? ["#2563eb", "#1e3a8a"]).join(", ")})`,
@@ -168,7 +162,7 @@ const AchievementsSection: React.FC = () => {
                   </div>
                 )}
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

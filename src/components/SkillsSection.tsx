@@ -12,23 +12,24 @@ import sqllogo from '../assets/skill-logos/Sql_data_base_with_logo.png';
 import nmaplogo from '../assets/skill-logos/logo-nmap.png';
 import pfsenselogo from '../assets/skill-logos/pfsense-logo.png';
 import mongodblogo from '../assets/skill-logos/mongoDB-logo.png';
+import gns3logo from '../assets/skill-logos/gns-logo.png';
 
 
 const sectors = [
   {
     name: 'Front-end Development',
     technologies: [
-      { logo: reactlogo, description: 'React.js, HTML/CSS, TailwindCSS – used in Portfolio project' },
-      { logo: rora, description: 'Ruby on Rails – SPA project for school portal' },
-      { logo: javasriptlogo, description: 'JavaScript/TypeScript – interactive dashboards' },
+      { logo: reactlogo, description: 'React.js, HTML/CSS, TailwindCSS – used in MERN stack projects and web applications' },
+      { logo: rora, description: 'Ruby on Rails – Used to build 2 tier MVC web application for university assignment.' },
+      { logo: javasriptlogo, description: 'JavaScript/TypeScript – interactive dashboards, web applications' },
     ],
   },
   {
     name: 'Back-end Development',
     technologies: [
-      { logo: nodejslogo, description: 'Node.js, Express – REST APIs for Portfolio' },
+      { logo: nodejslogo, description: 'Node.js, Express – APIs for Portfolio, and other MERN stack projects' },
       { logo: pythonlogo, description: 'Python – automation scripts and CTF tools' },
-      { logo: rora, description: 'Ruby on Rails – SPA project for school portal' },
+      { logo: rora, description: 'Ruby on Rails – Used to build 2 tier MVC web application for university assignment.' },
       { logo: sqllogo, description: 'SQL/PostgreSQL – database management' },
       { logo: mongodblogo, description: 'MongoDB – NoSQL database management' },
     ],
@@ -42,20 +43,21 @@ const sectors = [
   {
     name: 'Network Security',
     technologies: [
-      { logo: nmaplogo, description: 'Nmap, Netmiko – network scanning & automation' },
+      { logo: nmaplogo, description: 'Nmap – network scanning & automation' },
       { logo: pfsenselogo, description: 'Firewalls – PfSense lab setup' },
     ],
   },
   {
     name: 'Forensics',
     technologies: [
-      { logo: autopsylogo, description: 'Autopsy – disk & memory analysis for CTFs' },
+      { logo: autopsylogo, description: 'Autopsy – disk & memory analysis used in university projects and CTFs' },
     ],
   },
   {
     name: 'Other Tools',
     technologies: [
       { logo: gitlogo, description: 'Git – version control for all projects' },
+      { logo: gns3logo, description: 'GNS3 – network simulation' },
     ],
   },
 ];
