@@ -344,16 +344,16 @@ const cards = [
     },
   },
   {
-    description: "Stateless Quiz Platform for batchmates",
+    description: "Single-Page Application Quiz Platform for batchmates",
     title: "Academia",
     src: AcademiaSS1,
     ctaText: "Try it out",
-    ctaLink: "https://itc1370-lms-quiz.vercel.app/",
+    ctaLink: "https://usj-fmsc-lms-quiz.vercel.app/",
     content: () => {
       return (
         <p>
           <b>The Academia Quiz LMS Platform Help Students Face Exam with more confidence and readiness</b><br /><br />
-          The <b>Academia</b> is a stateless(all information processed on client-side) LMS web application I built to help my peer fellow students prepare for their 1st Year ITC-Exam in the Management Program at FMSC of USJ<br />
+          The <b>Academia</b> is a Single-Page Application(all data and content processed on client-side) LMS web application I built to help my peer fellow students prepare for their 1st Year ITC-Exam in the Management Program at FMSC of USJ<br />
           <br /><b>Stats and Analytics</b>
           <br />Within the first 3 days of launch the LMS got close to 600 New Users with 23,000  Edge Requests (1st Week of deployment) reported by Vercel and google analytics. The LMS is still in its early stages, but the initial response has been overwhelmingly positive, with users praising its user-friendly interface and effective learning tools.
           <br /><br /><b>Key Capabilities:</b><br />
@@ -366,7 +366,7 @@ const cards = [
           <b>More Than Just Multiple Choice:</b>
           <p>We know learning isn't one-size-fits-all. That's why Academia supports a <b>vast array of question types</b>. This keeps things engaging and truly tests your understanding, not just your ability to pick A, B, or C.</p><br />
           <p><b> Build & Technical Highlights</b>
-            <br />This stateless quiz platform was architected to run entirely client-side, leveraging React with Vite for lightning-fast development and performance. I managed state using Zustand, combined with localStorage to persist user progress seamlessly across page reloads and even browser restarts—without any backend or server dependencies.
+            <br />This SPA Application quiz platform was architected to run entirely client-side, leveraging React with Vite for lightning-fast development and performance. I managed state using Zustand, combined with localStorage to persist user progress seamlessly across page reloads and even browser restarts—without any backend or server dependencies.
             <br /><br />To deliver a smooth, realistic quiz experience, I implemented an efficient question randomization system using the Fisher-Yates shuffle algorithm, ensuring each attempt feels fresh and unpredictable.
             <br /><br />Answer evaluation goes beyond exact matches—I incorporated a robust fuzzy matching approach based on Levenshtein distance to gracefully handle typos and minor answer variations, especially for fill-in-the-blank and essay responses.
             <br /><br />Finally, I deployed the entire application on Vercel, providing a globally distributed, fast, and scalable hosting environment with zero server management, keeping the app always available and lightning quick for users.</p>
