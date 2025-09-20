@@ -46,7 +46,7 @@ const HeroSection: React.FC = () => {
             className="order-2 lg:order-1"
             style={{ y: textY }}
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-gray-900 dark:text-white">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-gray-900 dark:text-white text-nowrap">
               Hi, I'm{" "}
               <span className="text-blue-600 dark:text-blue-400">
                 <TypewriterWithScramble
@@ -58,7 +58,7 @@ const HeroSection: React.FC = () => {
               </span>
             </h1>
 
-           <h2 className="text-xl md:text-2xl font-medium mb-6 text-gray-700 dark:text-gray-100">
+           <h2 className="text-xl md:text-2xl font-medium mb-2 text-gray-700 dark:text-gray-100 text-nowrap">
               I specialize in{""}
               <span className="inline-block min-h-[3rem] md:min-h-[3.5rem] lg:min-h-[4rem]">
                 <FlipWords words={flipWords1} />
@@ -72,10 +72,7 @@ const HeroSection: React.FC = () => {
               I like to solve problems that I face on the go and 
               leave it a bit better than I found it. My passion lies in creating solutions and leading projects.
               My core values are helping those who need it and learn from what I
-              need improving. Armed with a strong academic backbone, real-world
-              experience, and a restless urge to question everything, I'm
-              constantly learning, testing, shaping cybersecurity
-              solutions that make the digital world not just safer but better.
+              need improving.
             </p>
 
             {/* Buttons */}
