@@ -66,7 +66,7 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <a
           href="#"
-          className="text-2xl font-bold text-blue-600 dark:text-blue-400 transition-colors"
+          className="text-2xl font-bold text-nowrap text-blue-600 dark:text-blue-400 transition-colors mr-2"
         >
           Dinuka Liyanage
         </a>

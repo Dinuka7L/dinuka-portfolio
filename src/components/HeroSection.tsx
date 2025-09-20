@@ -74,7 +74,7 @@ const HeroSection: React.FC = () => {
               My core values are helping those who need it and learn from what I
               need improving. Armed with a strong academic backbone, real-world
               experience, and a restless urge to question everything, I'm
-              constantly learning, sharpening, testing, shaping cybersecurity
+              constantly learning, testing, shaping cybersecurity
               solutions that make the digital world not just safer but better.
             </p>
 
@@ -139,6 +139,8 @@ const HeroSection: React.FC = () => {
             </div>
           </motion.div>
 
+          
+
           {/* RIGHT SIDE - Image with parallax */}
           <motion.div
             className="order-1 lg:order-2 flex justify-center lg:justify-end relative"
@@ -161,16 +163,16 @@ const HeroSection: React.FC = () => {
                 alt="Dinuka Liyanage Profile"
                 size={320}
                 imageSize={280}
-                borderWidth={1}
+                borderWidth={0}
                 duration={4000}
-                className="shadow-xl border-4 border-white dark:border-gray-800 relative z-10"
+                className="shadow-xl border-4 dark:border-gray-800 relative z-20 -ml-10"
               />
             </div>
           </motion.div>
         </div>
 
         {/* Scroll Down Button */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-pulse">
           <button
             onClick={() => scrollToSection("qualifications")}
             className="p-2 rounded-full bg-white/30 dark:bg-gray-800/30 backdrop-blur-sm hover:bg-white/50 dark:hover:bg-gray-800/50 transition-colors"
