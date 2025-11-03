@@ -29,13 +29,13 @@ const educationData: Education[] = [
     gradientColors: ["#00ffc9", "#2563eb", "#1e3a8a", "#4b00b4"],
   },
   {
-    degree: "Bachelor of Science in Accounting and Finance",
+    degree: "Bachelor of Science in Accounting (Special)",
     institutionName: "University of Sri Jayewardenepura",
     institutionUrl: "https://www.sjp.ac.lk/",
-    location: "Colombo, Sri Lanka",
+    location: "Colombo, Sri Lanka", 
     year: "2025 - Present",
-    description:
-      "Currently pursuing a degree in Accounting and Finance, sharpening my mind to deal with financial systems, accounting principles, and strategic management.",
+    description: "Currently pursuing a degree in Accounting and Finance, sharpening my mind to deal with financial systems, accounting principles, and strategic management.",
+    grade: "GPA: 3.77/4.0",
     logo: "https://www.sjp.ac.lk/wp-content/uploads/2020/10/usjp-logo-500x500.png",
     gradientColors: ["#aa1900", "#e20000", "#ffb700", "#e9ad21"],
   },
