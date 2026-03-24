@@ -3,6 +3,7 @@ import { Trophy, Calendar, MapPin } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import SplitText from "../ui/split-text";
 import ctf2025 from "../assets/Sliit-codefest-ctf-2025.png";
+import finhack2026 from "../assets/accafinhack2026logo.png";
 import certSample from "../assets/DL-SLIIT-Codefest-CTF-RunnerUp-Cert.jpg";
 
 type Achievement = {
@@ -18,6 +19,18 @@ type Achievement = {
 };
 
 const achievementsData: Achievement[] = [
+  {
+    title: "2nd Runners-up ACCA Financial Hackathon 2026",
+    issuer: "ACCA Sri Lanka",
+    issuerUrl: "https://www.facebook.com/ACCASriLanka/photos/the-wait-is-over-finhack-2026-is-here-bringing-together-bright-minds-ready-to-ch/1344765764352535/",
+    location: "ACCA, Sri Lanka",
+    year: "2026",
+    description:
+      "Competed against 8 top-tier universities across south Asian cluster to develop a comprehensive business solution covering the end-to-end process including risk analysis, financial modelling and business continuity. Secured 3rd place with the help of my teammates which I have contributed for the sustainability and IT infrastructure sections of the solution. The solution was evaluated by a panel of industry experts and ACCA professionals.",
+    logo: finhack2026,
+    gradientColors: ["#4a0404", "#57050b", "#2b0101"],
+    cert: certSample
+  },
   {
     title: "1st Runners-up CodeFest CTF 2025",
     issuer: "CodeFest 2025 Capture the Flag by SLIIT",

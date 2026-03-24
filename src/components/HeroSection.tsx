@@ -2,7 +2,8 @@ import React from "react";
 import { ArrowDown, Github, Linkedin, Mail, Rss } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import TypewriterWithScramble from "./TypewriterWithScramble";
-import resumePDF from "../assets/dinuka_liyanage_resume.pdf";
+import resumeIT  from "../assets/dinuka_liyanage_resume_IT.pdf";
+import resumeBusiness from "../assets/dinuka_liyanage_resume_Business.pdf";
 import myfromalpicture from "../assets/Photo-Dinuka Liyanage-Formal.jpg";
 import { FlipWords } from "../ui/flip-words";
 import { MovingBorderImage } from "../ui/moving-border";
@@ -91,15 +92,95 @@ const HeroSection: React.FC = () => {
               </button>
             </div>
 
-            <div className="hero-buttons">
-              <a
-                href={resumePDF}
-                download
-                className="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+            <div className="hidden md:block mt-4 ml-1 mr-1 relative group w-[340px] h-[46px]">
+
+              {/* Default Button */}
+              <div
+                className="
+                absolute inset-0 flex items-center justify-center
+                rounded-lg text-white font-medium
+                bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600
+                shadow-lg shadow-blue-500/20
+                transition-all duration-300
+                group-hover:opacity-0 group-hover:scale-95
+                "
               >
-                Download My Resume
-              </a>
+                Download Resume
+              </div>
+
+              {/* Hover Buttons */}
+              <div
+                className="
+                absolute inset-0 flex gap-3
+                opacity-0 group-hover:opacity-100
+                transition-all duration-300
+                "
+              >
+                <a
+                  href={resumeIT}
+                  download
+                  className="
+                  flex-1 flex items-center justify-center
+                  rounded-lg text-white font-medium
+                  bg-gradient-to-r from-blue-500 to-cyan-500
+                  hover:scale-105 transition
+                  "
+                >
+                  Get IT Resume
+                </a>
+
+                <a
+                  href={resumeBusiness}
+                  download
+                  className="
+                  flex-2 flex items-center justify-center
+                  rounded-lg text-white font-medium
+                  bg-gradient-to-r from-black to-red-500
+                  hover:scale-105 transition
+                  "
+                >
+                  Get Business Resume
+                </a>
+              </div>
+
             </div>
+
+
+<div className="md:hidden mt-4 flex gap-3">
+
+  <a
+    href={resumeIT}
+    download
+    className="
+    flex-1 flex items-center justify-center
+    px-4 py-2 rounded-lg text-white font-medium
+    bg-gradient-to-r from-blue-500 to-cyan-500
+    "
+  >
+    Get IT Resume
+  </a>
+
+  <a
+    href={resumeBusiness}
+    download
+    className="
+    flex-1 flex items-center justify-center
+    px-4 py-2 rounded-lg text-white font-medium
+    bg-gradient-to-r from-purple-500 to-pink-500
+    "
+  >
+    Get Business Resume
+  </a>
+
+</div>
+
+
+
+
+
+
+            
+
 
             {/* Social Links */}
             <div className="flex gap-6 mt-8">
