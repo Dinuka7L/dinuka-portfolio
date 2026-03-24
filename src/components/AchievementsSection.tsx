@@ -22,7 +22,7 @@ const achievementsData: Achievement[] = [
   {
     title: "2nd Runners-up ACCA Financial Hackathon 2026",
     issuer: "ACCA Sri Lanka",
-    issuerUrl: "https://www.facebook.com/ACCASriLanka/photos/the-wait-is-over-finhack-2026-is-here-bringing-together-bright-minds-ready-to-ch/1344765764352535/",
+    issuerUrl: "https://www.facebook.com/share/v/1BEZvzF5iT/",
     location: "ACCA, Sri Lanka",
     year: "2026",
     description:
