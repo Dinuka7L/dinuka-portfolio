@@ -28,8 +28,8 @@ const achievementsData: Achievement[] = [
     description:
       "Competed against 8 top-tier universities across south Asian cluster to develop a comprehensive business solution covering the end-to-end process including risk analysis, financial modelling and business continuity. Secured 3rd place with the help of my teammates which I have contributed for the sustainability and IT infrastructure sections of the solution. The solution was evaluated by a panel of industry experts and ACCA professionals.",
     logo: finhack2026,
-    gradientColors: ["#4a0404", "#57050b", "#2b0101"],
-    cert: certSample
+    gradientColors: ["#4a0404", "#9e0028", "#572305"],
+    
   },
   {
     title: "1st Runners-up CodeFest CTF 2025",
