@@ -21,10 +21,10 @@ const educationData: Education[] = [
     institutionName: "Edith Cowan University",
     institutionUrl: "https://www.ecu.edu.au/",
     location: "Perth, Australia",
-    year: "2022 - Present",
+    year: "2022 - 2026",
     description:
-      "Final year undergrad in Cybersecurity with a focus on mastering skills on offensive and defensive security. Shaped by practical experiences and real-world applications.",
-    grade: "GPA: 3.54/4.0",
+      "Graduate in Cybersecurity with a focus on mastering skills on offensive and defensive security. Shaped by practical experiences and real-world applications.",
+    grade: "GPA: 3.56/4.0",
     logo: "https://www.ecu.edu.au/__data/assets/image/0004/1100389/ecu-logo.png",
     gradientColors: ["#00ffc9", "#2563eb", "#1e3a8a", "#4b00b4"],
   },
@@ -46,7 +46,7 @@ const educationData: Education[] = [
     location: "Galle, Sri Lanka",
     year: "2010 - 2023",
     description:
-      "Completed GCE Advanced Level Examination in Commerce stream with strong skills in Accounting, Economics and IT.",
+      "Completed GCE Advanced Level Examination in Commerce stream  in Accounting, Economics and IT.",
     grade: "Grade: 3As, Z-Score: 2.5195",
     logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3XZ90ziCThbeUT99sTHp_aamMBPSSncEmcg&s",
     gradientColors: ["#00b4d8", "#0085fe", "#c30025"],

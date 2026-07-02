@@ -4,7 +4,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import SplitText from "../ui/split-text";
 import ctf2025 from "../assets/Sliit-codefest-ctf-2025.png";
 import finhack2026 from "../assets/accafinhack2026logo.png";
+import cryptXLogo from "../assets/cryptxlogo.svg";
 import certSample from "../assets/DL-SLIIT-Codefest-CTF-RunnerUp-Cert.jpg";
+import cryptXCert from "../assets/Dinuka_Liyanage_certificate-CryptX-Top15.png";
+
 
 type Achievement = {
   title: string;
@@ -19,6 +22,19 @@ type Achievement = {
 };
 
 const achievementsData: Achievement[] = [
+  {
+    title: "Top 15 Finalist at CryptX CTF 2026",
+    issuer: "ICTS of University of Sri Jayewardenepura",
+    issuerUrl: "https://cryptx.lk/",
+    location: "FOT,USJ, Sri Lanka",
+    year: "2026",
+    description:
+      "Competed against 30+ teams in the CryptX LK CTF, securing a spot in the top 15 finalists by successfully solving advanced cybersecurity and cryptographic challenges. ",
+    logo: cryptXLogo,
+    gradientColors: ["#e8561c", "#080200", "#8f320d"],
+    cert: cryptXCert
+    
+  },
   {
     title: "2nd Runners-up ACCA Financial Hackathon 2026",
     issuer: "ACCA Sri Lanka",
