@@ -23,7 +23,7 @@ const educationData: Education[] = [
     location: "Perth, Australia",
     year: "2022 - 2026",
     description:
-      "Graduate in Cybersecurity with a focus on mastering skills on offensive and defensive security. Shaped by practical experiences and real-world applications.",
+      "Graduate | Silver Medalist (Second highest performer in passing out batch Semester 03 2025) | Focus on mastering skills on offensive and defensive security. Shaped by practical experiences and real-world applications.",
     grade: "GPA: 3.56/4.0",
     logo: "https://www.ecu.edu.au/__data/assets/image/0004/1100389/ecu-logo.png",
     gradientColors: ["#00ffc9", "#2563eb", "#1e3a8a", "#4b00b4"],
