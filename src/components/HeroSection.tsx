@@ -8,6 +8,7 @@ import myfromalpicture from "../assets/Photo-Dinuka Liyanage-Formal.jpg";
 import { FlipWords } from "../ui/flip-words";
 import { MovingBorderImage } from "../ui/moving-border";
 import { CirclingGradientStroke } from "../ui/circling-gradient-stroke";
+import cv from "../assets/dinuka_liyanage_cv.pdf";
 
 const flipWords1 = [
   "Information Security",
@@ -92,58 +93,82 @@ const HeroSection: React.FC = () => {
               </button>
             </div>
 
-            <div className="hidden md:block mt-4 ml-1 mr-1 relative group w-[340px] h-[46px]">
+            <div className="hidden md:flex mt-4 ml-1 mr-1 flex-col gap-3 w-[340px]">
 
-              {/* Default Button */}
-              <div
-                className="
-                absolute inset-0 flex items-center justify-center
-                rounded-lg text-white font-medium
-                bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600
-                shadow-lg shadow-blue-500/20
-                transition-all duration-300
-                group-hover:opacity-0 group-hover:scale-95
-                "
-              >
-                Download Resume
-              </div>
+  {/* Resume Button */}
+  <div className="relative group w-full h-[46px]">
 
-              {/* Hover Buttons */}
-              <div
-                className="
-                absolute inset-0 flex gap-3
-                opacity-0 group-hover:opacity-100
-                transition-all duration-300
-                "
-              >
-                <a
-                  href={resumeIT}
-                  download
-                  className="
-                  flex-1 flex items-center justify-center
-                  rounded-lg text-white font-medium
-                  bg-gradient-to-r from-blue-500 to-cyan-500
-                  hover:scale-105 transition
-                  "
-                >
-                  Get IT Resume
-                </a>
+    {/* Default Button */}
+    <div
+      className="
+      absolute inset-0 flex items-center justify-center
+      rounded-lg text-white font-medium
+      bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600
+      shadow-lg shadow-blue-500/20
+      transition-all duration-300
+      group-hover:opacity-0 group-hover:scale-95
+      "
+    >
+      Download Resume
+    </div>
 
-                <a
-                  href={resumeBusiness}
-                  download
-                  className="
-                  flex-2 flex items-center justify-center
-                  rounded-lg text-white font-medium
-                  bg-gradient-to-r from-black to-red-500
-                  hover:scale-105 transition
-                  "
-                >
-                  Get Business Resume
-                </a>
-              </div>
+    {/* Hover Resume Buttons */}
+    <div
+      className="
+      absolute inset-0 flex gap-3
+      opacity-0 group-hover:opacity-100
+      transition-all duration-300
+      "
+    >
+      <a
+        href={resumeIT}
+        download
+        className="
+        flex-1 flex items-center justify-center
+        rounded-lg text-white font-medium
+        bg-gradient-to-r from-blue-500 to-cyan-500
+        hover:scale-105 transition
+        "
+      >
+        Get IT Resume
+      </a>
 
-            </div>
+      <a
+        href={resumeBusiness}
+        download
+        className="
+        flex-1 flex items-center justify-center
+        rounded-lg text-white font-medium
+        bg-gradient-to-r from-black to-red-500
+        hover:scale-105 transition
+        "
+      >
+        Get Business Resume
+      </a>
+    </div>
+
+  </div>
+
+  {/* CV Button */}
+  <a
+    href={cv}
+    download
+    className="
+      w-full h-[46px]
+      flex items-center justify-center
+      rounded-lg
+      text-white font-medium
+      bg-gradient-to-r from-gray-800 to-gray-600
+      hover:from-gray-700 hover:to-gray-500
+      hover:scale-[1.02]
+      transition-all duration-300
+      shadow-lg
+    "
+  >
+    Download CV
+  </a>
+
+</div>
 
 
 <div className="md:hidden mt-4 flex gap-3">
