@@ -10,6 +10,7 @@ import DogGenAPI from '../assets/DogGenAPI.png';
 import AcademiaSS1 from '../assets/Academia-SS-1.png';
 import DNotesImage1 from "../assets/DNotes-1.png";
 import MERNAuthSS1 from "../assets/MERN-Auth-SS-1.png"
+import VillaDinoosSS from "../assets/Villa-Dinoos-SS.png"
 
 function MyProjectsSection() {
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
@@ -265,6 +266,38 @@ export const CloseIcon = () => {
 };
 
 const cards = [
+  {
+    description: "Luxury Villa Website",
+    title: "Villa Dinoos - Luxury Villa Website",
+    src: VillaDinoosSS,
+    ctaText: "See Project",
+    ctaLink: "https://villadinoos.lk",
+    content: () => {
+      return (
+        <p>
+          <b>Villa Dinoos - Luxury Villa Website</b><br /><br />
+          <b>Villa Dinoos</b> is a stunning luxury villa website designed to showcase the elegance and comfort of this exclusive property. Built with modern web technologies, the site provides an immersive experience for potential guests to explore the villa's amenities, services, and booking options.<br /><br />
+
+          <b>Key Features:</b><br />
+          - <b>Responsive Design:</b> <br />
+          The website is fully responsive, ensuring a seamless experience across all devices.<br /><br />
+
+          - <b>Interactive Gallery:</b> <br />
+          A visually appealing gallery showcasing the villa's interior and exterior spaces.<br /><br />
+
+          - <b>Booking System:</b> <br />
+          An integrated booking system allowing users to easily reserve their stay at the villa through direct contact or through OTA.<br /><br />
+
+          <b>Technical Highlights:</b><br />
+          - Built with <b>React + Vite</b> for a fast and efficient front-end experience.<br />
+          - Utilizes <b>Tailwind CSS</b> for modern styling and responsive layouts.<br />
+          - Optimized for performance and SEO to attract more visitors.<br /><br />
+          
+
+        </p>
+      );
+    },
+  },
   {
     description: "Next-Gen SOC Management Platform",
     title: "SentraFusion",
