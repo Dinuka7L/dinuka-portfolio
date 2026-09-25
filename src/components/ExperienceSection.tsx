@@ -22,24 +22,20 @@ const experienceData: Experience[] = [
       'Incident Response and Analysis of Security Breaches.',
       'Expertise with SOC Tools - SIEM, XDR, and EDR and SOAR.',
       'SOC Operations - Incident Detection and Escalation.',
-      'Left due to academic priorities and I didn\'t like SOC work. Too much repetitive, I prefer more dynamic and challenging roles.',
+      'Left early due to academic priorities.',
     ],
     technologies: ['SIEM', 'EDR', 'XDR', 'FortiSIEM', 'LogRythm', 'Security Operations Center (SOC)', 'Stellar XDR', 'Microsoft Sentinel', 'Threat Intelligence'],
     companyWebsite: 'https://www.crypto-gen.com/'
   },
   {
-    title: 'Solution-Focused Developer (Vibe Coder)',
+    title: 'Vibe Coder)',
     company: 'Me, myself and I',
     location: 'Anywhere & Everywhere',
     period: 'Continous',
     description: [
-      'Currently engineering real-world business process automation solutions, including RAG-based applications and autonomous AI agents designed for enterprise-grade deployment.',
-      'Designed and built full-stack web applications and internal tools to continuously sharpen my software development skills.',
-      'Hands-on experience in both Blue Team (defensive) and Red Team (offensive) operations, utilizing custom-built lab and sandbox environments for simulated cyber warfare.',
-      'Constantly exploring and prototyping emerging technologies through personal projects, with a focus on scalability, automation, and systems thinking.',
-      'While cybersecurity remains my core expertise, I actively design and engineer end-to-end technical solutions for solving real-world business and operational challenges.',
+      'Whenever I see a problem, I try to solve it with code. Its just my passion, even though I might not know fully on software development, I try to learn and implement it.',
     ],
-    technologies: ['Agentic AI', 'Python', 'IT Automation', 'Cloud-Based Services', 'LLMs', 'Version Control', 'API Development & Integration','Infrastructure as Code (IaC)', 'Containerization'],
+    technologies: ['Python', 'IT Automation', 'Cloud-Based Services', 'LLMs', 'Version Control', 'API Development & Integration','MERN', 'Containerization'],
     companyWebsite: ''
   }
   
